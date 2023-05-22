@@ -5,17 +5,6 @@ K {}
 V {}
 S {}
 E {}
-T {v(vcc) = 1.800
-v(inm) = 0.900
-v(inp) = 0.900
-v(out) = 0.3178557
-
-v(m5vg) = 0.3178557
-v(m6vd) = 0.6472242
-v(m6vs) = 1.419536
-v(m7vd) = 0.6472242
-v(m9vg) = 0.6582570
-} 480 -260 0 0 0.4 0.4 {}
 N 0 70 400 70 {
 lab=M5VG}
 N -40 100 -40 140 {
@@ -221,62 +210,6 @@ C {devices/ipin.sym} -200 -20 0 0 {name=p1 lab=IN+}
 C {devices/ipin.sym} -200 0 0 0 {name=p2 lab=IN-}
 C {devices/ipin.sym} -200 -110 0 0 {name=p3 lab=VCC}
 C {devices/ipin.sym} -200 -80 0 0 {name=p4 lab=VSS}
-C {nfet_01v8_lvt.sym} 100 170 0 0 {name=M1
-L=15
-W=40
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
-C {nfet_01v8_lvt.sym} 420 170 0 0 {name=M2
-L=15
-W=40
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
-C {nfet_01v8_lvt.sym} 300 170 0 1 {name=M3
-L=15
-W=40
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
-C {nfet_01v8_lvt.sym} -20 170 0 1 {name=M4
-L=15
-W=40
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
 C {devices/lab_pin.sym} 40 -10 0 0 {name=p6 sig_type=std_logic lab=IN-}
 C {devices/lab_pin.sym} 360 -10 0 1 {name=p7 sig_type=std_logic lab=IN+}
 C {devices/lab_pin.sym} 40 -60 0 0 {name=p8 sig_type=std_logic lab=VSS}
@@ -289,8 +222,8 @@ C {devices/lab_pin.sym} 40 50 0 1 {name=p11 sig_type=std_logic lab=M5VG}
 C {devices/lab_pin.sym} 220 -120 0 1 {name=p14 sig_type=std_logic lab=M6VS}
 C {devices/lab_pin.sym} 140 120 0 1 {name=p15 sig_type=std_logic lab=M6VD}
 C {devices/lab_pin.sym} 260 120 0 0 {name=p16 sig_type=std_logic lab=M7VD}
-C {pfet_01v8_lvt.sym} 100 -10 0 0 {name=M6
-L=1
+C {pfet_01v8.sym} 300 -10 0 1 {name=M7
+L=0.25
 W=25
 nf=1
 mult=3
@@ -300,11 +233,11 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=pfet_01v8_lvt
+model=pfet_01v8
 spiceprefix=X
 }
-C {pfet_01v8_lvt.sym} 300 -10 0 1 {name=M7
-L=1
+C {pfet_01v8.sym} 100 -10 0 0 {name=M6
+L=0.25
 W=25
 nf=1
 mult=3
@@ -314,6 +247,62 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=pfet_01v8_lvt
+model=pfet_01v8
+spiceprefix=X
+}
+C {nfet_01v8.sym} 420 170 0 0 {name=M2
+L=15
+W=40
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {nfet_01v8.sym} -20 170 0 1 {name=M4
+L=15
+W=40
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {nfet_01v8.sym} 100 170 0 0 {name=M1
+L=15
+W=40
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {nfet_01v8.sym} 300 170 0 1 {name=M3
+L=15
+W=40
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
 spiceprefix=X
 }
