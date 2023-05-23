@@ -49,10 +49,9 @@ N 0 -80 60 -80 {
 lab=out}
 C {devices/lab_pin.sym} 80 -80 0 1 {name=p6 lab=out}
 C {devices/vsource.sym} -410 -190 0 0 {name=V1 value=1.8}
-C {/home/zwierzak/projects/Sky130_OpAmp/opamp.sym} -100 -80 0 0 {name=x1}
 C {devices/code_shown.sym} 130 -150 0 0 {name=sim only_toplevel=false value="
 .save v(inm),v(inp),v(out)
-.dc V4 0 1.8 0.001
+.dc V4 0.97 1.0 0.000001
 "}
 C {devices/code_shown.sym} 130 -250 0 0 {name=models
 only_toplevel=false
@@ -75,3 +74,4 @@ m=1
 value=1p
 footprint=1206
 device="ceramic capacitor"}
+C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp_cascode.sym} -100 -80 0 0 {name=x1}
