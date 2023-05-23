@@ -92,7 +92,7 @@ lab=#net2}
 N -120 120 -100 120 {
 lab=#net2}
 N -60 70 460 70 {
-lab=VCC}
+lab=BIAS1}
 N 120 -60 120 -40 {
 lab=MDIFFVS}
 N 120 -60 280 -60 {
@@ -108,7 +108,7 @@ lab=OUT}
 N -100 -60 -100 40 {
 lab=#net3}
 N -60 -90 460 -90 {
-lab=VSS}
+lab=BIAS}
 N -100 -40 -40 -40 {
 lab=#net3}
 N -40 -190 -40 -40 {
@@ -190,13 +190,13 @@ lab=#net4}
 N -120 -140 -100 -140 {
 lab=#net4}
 N 40 -120 40 -90 {
-lab=VSS}
+lab=BIAS}
 N 40 40 40 70 {
-lab=VCC}
-N 420 -340 420 70 {
-lab=VCC}
-N 440 -90 440 220 {
-lab=VSS}
+lab=BIAS1}
+N 680 -220 680 -200 {}
+N 780 -220 780 -200 {}
+N 780 -140 780 -120 {}
+N 680 -140 680 -120 {}
 C {pfet_01v8.sym} 480 -190 0 0 {name=M5
 L=10
 W=40
@@ -410,3 +410,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
+C {devices/vsource.sym} 680 -170 0 0 {name=V1 value=0.64}
+C {devices/vsource.sym} 780 -170 0 0 {name=V2 value=0.9}
+C {devices/lab_pin.sym} 680 -120 0 0 {name=p17 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 780 -120 0 0 {name=p18 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 680 -220 0 0 {name=p19 sig_type=std_logic lab=BIAS}
+C {devices/lab_pin.sym} 780 -220 0 0 {name=p20 sig_type=std_logic lab=BIAS1}
