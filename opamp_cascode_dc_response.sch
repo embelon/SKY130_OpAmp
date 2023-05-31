@@ -49,11 +49,14 @@ N 0 -80 60 -80 {
 lab=out}
 C {devices/lab_pin.sym} 80 -80 0 1 {name=p6 lab=out}
 C {devices/vsource.sym} -410 -190 0 0 {name=V1 value=1.8}
-C {devices/code_shown.sym} 130 -150 0 0 {name=sim only_toplevel=false value="
-.save v(inm),v(inp),v(out)
-.dc V4 0.97 1.0 0.000001
+C {devices/code_shown.sym} 140 -110 0 0 {name=sim only_toplevel=false value="
+.control
+  save v(inm),v(inp),v(out)
+  dc V4 0.975 0.995 0.000001
+  plot deriv(v(out))
+.endc
 "}
-C {devices/code_shown.sym} 130 -250 0 0 {name=models
+C {devices/code_shown.sym} 140 -210 0 0 {name=models
 only_toplevel=false
 format="tcleval( @value )"
 value="
