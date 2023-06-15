@@ -52,7 +52,7 @@ C {devices/vsource.sym} -410 -190 0 0 {name=V1 value=1.8}
 C {devices/code_shown.sym} 140 -110 0 0 {name=sim only_toplevel=false value="
 .control
   save v(inm),v(inp),v(out)
-  dc V4 0.975 0.995 0.000001
+  dc V4 0.98 0.99 0.000001
   plot deriv(v(out))
 .endc
 "}
