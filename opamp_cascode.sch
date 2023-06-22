@@ -195,9 +195,9 @@ N 680 -140 680 -120 {
 lab=VSS}
 C {pfet_01v8.sym} 480 -190 0 0 {name=M10
 L=10
-W=40
+W=5
 nf=1
-mult=2
+mult=30
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -209,9 +209,9 @@ spiceprefix=X
 }
 C {pfet_01v8.sym} -80 -190 0 1 {name=M1
 L=10
-W=40
+W=5
 nf=1
-mult=2
+mult=30
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -223,9 +223,9 @@ spiceprefix=X
 }
 C {pfet_01v8.sym} 180 -290 0 0 {name=M5
 L=3
-W=20
+W=5
 nf=1
-mult=10
+mult=40
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -237,9 +237,9 @@ spiceprefix=X
 }
 C {pfet_01v8.sym} -240 -290 0 1 {name=M100
 L=3
-W=20
+W=5
 nf=1
-mult=1
+mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -249,7 +249,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/isource.sym} -260 -190 0 0 {name=I0 value=3.5u}
+C {devices/isource.sym} -260 -190 0 0 {name=I0 value=5.1u}
 C {devices/ipin.sym} -350 -20 0 0 {name=p1 lab=IN+}
 C {devices/ipin.sym} -350 0 0 0 {name=p2 lab=IN-}
 C {devices/ipin.sym} -350 -110 0 0 {name=p3 lab=VCC}
@@ -261,10 +261,10 @@ C {devices/lab_pin.sym} 200 -360 0 0 {name=p10 sig_type=std_logic lab=VCC}
 C {devices/opin.sym} -410 100 0 0 {name=p12 lab=OUT}
 C {devices/lab_pin.sym} 540 -10 0 1 {name=p13 sig_type=std_logic lab=OUT}
 C {pfet_01v8.sym} 480 -90 0 0 {name=M11
-L=3
-W=20
+L=5
+W=5
 nf=1
-mult=10
+mult=12
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -275,10 +275,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {pfet_01v8.sym} -80 -90 0 1 {name=M2
-L=3
-W=20
+L=5
+W=5
 nf=1
-mult=10
+mult=12
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -291,10 +291,10 @@ spiceprefix=X
 C {devices/lab_pin.sym} 40 -120 0 0 {name=p8 sig_type=std_logic lab=BIAS}
 C {devices/lab_pin.sym} 40 40 0 0 {name=p11 sig_type=std_logic lab=BIAS1}
 C {pfet_01v8.sym} 100 -10 0 0 {name=M6
-L=0.25
-W=25
-nf=2
-mult=3
+L=0.18
+W=5
+nf=1
+mult=50
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -305,10 +305,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {pfet_01v8.sym} 300 -10 0 1 {name=M8
-L=0.25
-W=25
-nf=2
-mult=3
+L=0.18
+W=5
+nf=1
+mult=50
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -319,10 +319,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {nfet_01v8.sym} 100 170 0 0 {name=M7
-L=10
-W=20
+L=1
+W=5
 nf=1 
-mult=1
+mult=3
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -333,10 +333,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {nfet_01v8.sym} 300 170 0 1 {name=M9
-L=10
-W=20
+L=1
+W=5
 nf=1 
-mult=1
+mult=3
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -347,10 +347,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {nfet_01v8.sym} 480 170 0 0 {name=M13
-L=10
-W=20
+L=1
+W=5
 nf=1 
-mult=3
+mult=6
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -361,10 +361,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {nfet_01v8.sym} -80 170 0 1 {name=M4
-L=10
-W=20
+L=1
+W=5
 nf=1 
-mult=3
+mult=6
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -376,9 +376,9 @@ spiceprefix=X
 }
 C {nfet_01v8.sym} 480 70 0 0 {name=M12
 L=3
-W=20
+W=5
 nf=1 
-mult=5
+mult=9
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -390,9 +390,9 @@ spiceprefix=X
 }
 C {nfet_01v8.sym} -80 70 0 1 {name=M3
 L=3
-W=20
+W=5
 nf=1 
-mult=5
+mult=9
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -402,8 +402,8 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/vsource.sym} 680 -170 0 0 {name=V1 value=0}
-C {devices/vsource.sym} 780 -170 0 0 {name=V2 value=0.6}
+C {devices/vsource.sym} 680 -170 0 0 {name=V1 value=0.12}
+C {devices/vsource.sym} 780 -170 0 0 {name=V2 value=0.7}
 C {devices/lab_pin.sym} 680 -120 0 0 {name=p17 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 780 -120 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 680 -220 0 0 {name=p19 sig_type=std_logic lab=BIAS}

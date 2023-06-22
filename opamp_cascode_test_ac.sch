@@ -123,5 +123,5 @@ C {devices/lab_pin.sym} -340 -520 3 1 {name=p9 lab=Vin}
 C {devices/vsource.sym} -190 160 3 0 {name=V1 value="DC=0 AC=\{1-B\}"}
 C {devices/lab_pin.sym} 160 -460 0 1 {name=p2 lab=VoutQ}
 C {devices/asrc.sym} -130 230 0 0 {name=B1 function="v=V(VoutQ)"}
-C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp.sym} -100 -80 0 0 {name=x1}
-C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp.sym} -100 -460 0 0 {name=x2}
+C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp_cascode.sym} -100 -460 0 0 {name=x2}
+C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp_cascode.sym} -100 -80 0 0 {name=x1}

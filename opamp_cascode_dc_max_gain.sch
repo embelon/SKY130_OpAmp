@@ -54,7 +54,7 @@ C {devices/vsource.sym} -400 -250 0 0 {name=Vcc value=1.8}
 C {devices/code_shown.sym} 130 -150 0 0 {name=sim only_toplevel=false value="
 .control
   save all
-  dc Vdiff 0.02 0.03 0.00001
+  dc Vdiff -0.01 0.01 0.000001
   plot deriv(v(out)) vs Vdiff retraceplot
 .endc
 "}
