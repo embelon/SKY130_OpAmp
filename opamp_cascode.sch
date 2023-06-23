@@ -22,9 +22,9 @@ lab=VCC}
 N 200 -340 200 -320 {
 lab=VCC}
 N 40 -10 80 -10 {
-lab=IN-}
+lab=IN_P}
 N 320 -10 360 -10 {
-lab=IN+}
+lab=IN_M}
 N 280 200 280 220 {
 lab=VSS}
 N 120 200 120 220 {
@@ -92,7 +92,7 @@ lab=#net5}
 N -120 120 -100 120 {
 lab=#net5}
 N -60 70 460 70 {
-lab=BIAS1}
+lab=VB_B}
 N 120 -60 120 -40 {
 lab=#net3}
 N 120 -60 280 -60 {
@@ -108,7 +108,7 @@ lab=OUT}
 N -100 -60 -100 40 {
 lab=#net6}
 N -60 -90 460 -90 {
-lab=BIAS}
+lab=VB_A}
 N -100 -40 -40 -40 {
 lab=#net6}
 N -40 -190 -40 -40 {
@@ -142,11 +142,7 @@ lab=#net7}
 N 500 -160 500 -120 {
 lab=#net8}
 N -260 -260 -260 -220 {
-lab=#net9}
-N -260 -160 -260 220 {
-lab=VSS}
-N -260 220 -120 220 {
-lab=VSS}
+lab=IB}
 N -260 -340 -260 -320 {
 lab=VCC}
 N -260 -340 -100 -340 {
@@ -158,13 +154,13 @@ lab=VCC}
 N -280 -340 -260 -340 {
 lab=VCC}
 N -260 -240 -200 -240 {
-lab=#net9}
+lab=IB}
 N -200 -290 -200 -240 {
-lab=#net9}
+lab=IB}
 N -220 -290 -200 -290 {
-lab=#net9}
+lab=IB}
 N -200 -290 160 -290 {
-lab=#net9}
+lab=IB}
 N 500 -10 540 -10 {
 lab=OUT}
 N -40 -190 460 -190 {
@@ -181,24 +177,18 @@ N -120 -140 -120 -90 {
 lab=#net7}
 N -120 -140 -100 -140 {
 lab=#net7}
-N 40 -120 40 -90 {
-lab=BIAS}
-N 40 40 40 70 {
-lab=BIAS1}
-N 680 -220 680 -200 {
-lab=BIAS}
-N 780 -220 780 -200 {
-lab=BIAS1}
-N 780 -140 780 -120 {
-lab=VSS}
-N 680 -140 680 -120 {
-lab=VSS}
 N -200 -40 -200 -20 {
 lab=#net6}
 N -200 -40 -100 -40 {
 lab=#net6}
 N -200 40 -200 220 {
 lab=VSS}
+N -200 220 -120 220 {
+lab=VSS}
+N 100 -120 100 -90 {
+lab=VB_A}
+N 60 40 60 70 {
+lab=VB_B}
 C {pfet_01v8.sym} 480 -190 0 0 {name=M9
 L=10
 W=5
@@ -255,16 +245,15 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/isource.sym} -260 -190 0 0 {name=I0 value=5.1u}
-C {devices/ipin.sym} -350 -20 0 0 {name=p1 lab=IN+}
-C {devices/ipin.sym} -350 0 0 0 {name=p2 lab=IN-}
-C {devices/ipin.sym} -350 -110 0 0 {name=p3 lab=VCC}
-C {devices/ipin.sym} -350 -80 0 0 {name=p4 lab=VSS}
-C {devices/lab_pin.sym} 40 -10 0 0 {name=p6 sig_type=std_logic lab=IN-}
-C {devices/lab_pin.sym} 360 -10 0 1 {name=p7 sig_type=std_logic lab=IN+}
+C {devices/ipin.sym} -350 -20 0 0 {name=p1 lab=IN_P}
+C {devices/ipin.sym} -350 0 0 0 {name=p2 lab=IN_M}
+C {devices/ipin.sym} -350 -200 0 0 {name=p3 lab=VCC}
+C {devices/ipin.sym} -350 -170 0 0 {name=p4 lab=VSS}
+C {devices/lab_pin.sym} 40 -10 0 0 {name=p6 sig_type=std_logic lab=IN_P}
+C {devices/lab_pin.sym} 360 -10 0 1 {name=p7 sig_type=std_logic lab=IN_M}
 C {devices/lab_pin.sym} 200 240 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 200 -360 0 0 {name=p10 sig_type=std_logic lab=VCC}
-C {devices/opin.sym} -410 100 0 0 {name=p12 lab=OUT}
+C {devices/opin.sym} -410 60 0 0 {name=p12 lab=OUT}
 C {devices/lab_pin.sym} 540 -10 0 1 {name=p13 sig_type=std_logic lab=OUT}
 C {pfet_01v8.sym} 480 -90 0 0 {name=M10
 L=5
@@ -294,8 +283,8 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 40 -120 0 0 {name=p8 sig_type=std_logic lab=BIAS}
-C {devices/lab_pin.sym} 40 40 0 0 {name=p11 sig_type=std_logic lab=BIAS1}
+C {devices/lab_pin.sym} 100 -120 0 0 {name=p8 sig_type=std_logic lab=VB_A}
+C {devices/lab_pin.sym} 60 40 0 0 {name=p11 sig_type=std_logic lab=VB_B}
 C {pfet_01v8.sym} 100 -10 0 0 {name=M5
 L=0.18
 W=5
@@ -408,14 +397,12 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/vsource.sym} 680 -170 0 0 {name=V1 value=0}
-C {devices/vsource.sym} 780 -170 0 0 {name=V2 value=0.9}
-C {devices/lab_pin.sym} 680 -120 0 0 {name=p17 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 780 -120 0 0 {name=p18 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 680 -220 0 0 {name=p19 sig_type=std_logic lab=BIAS}
-C {devices/lab_pin.sym} 780 -220 0 0 {name=p20 sig_type=std_logic lab=BIAS1}
 C {devices/capa.sym} -200 10 0 0 {name=C1
 m=1
 value=400f
 footprint=1206
 device="ceramic capacitor"}
+C {devices/lab_pin.sym} -260 -220 3 0 {name=p14 sig_type=std_logic lab=IB}
+C {devices/ipin.sym} -350 -100 0 0 {name=p15 lab=VB_A}
+C {devices/ipin.sym} -350 -80 0 0 {name=p16 lab=VB_B}
+C {devices/ipin.sym} -350 -120 0 0 {name=p17 lab=IB}
