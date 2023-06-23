@@ -52,8 +52,8 @@ C {devices/vsource.sym} -410 -190 0 0 {name=V1 value=1.8}
 C {devices/code_shown.sym} 140 -110 0 0 {name=sim only_toplevel=false value="
 .control
   save all 
-  set p_num_list = ( 1 2 5 6 8 10 11 100 )
-  set n_num_list = ( 3 4 7 9 12 13 )
+  set p_num_list = ( 1 2 5 7 9 10 20 100 )
+  set n_num_list = ( 3 4 6 8 11 12 )
   set param_list = ( vds )
   foreach p_num $p_num_list
     foreach param $param_list

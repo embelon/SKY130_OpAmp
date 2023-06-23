@@ -193,7 +193,13 @@ N 780 -140 780 -120 {
 lab=VSS}
 N 680 -140 680 -120 {
 lab=VSS}
-C {pfet_01v8.sym} 480 -190 0 0 {name=M10
+N -200 -40 -200 -20 {
+lab=#net6}
+N -200 -40 -100 -40 {
+lab=#net6}
+N -200 40 -200 220 {
+lab=VSS}
+C {pfet_01v8.sym} 480 -190 0 0 {name=M9
 L=10
 W=5
 nf=1
@@ -221,7 +227,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {pfet_01v8.sym} 180 -290 0 0 {name=M5
+C {pfet_01v8.sym} 180 -290 0 0 {name=M100
 L=3
 W=5
 nf=1
@@ -235,7 +241,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {pfet_01v8.sym} -240 -290 0 1 {name=M100
+C {pfet_01v8.sym} -240 -290 0 1 {name=M20
 L=3
 W=5
 nf=1
@@ -260,7 +266,7 @@ C {devices/lab_pin.sym} 200 240 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 200 -360 0 0 {name=p10 sig_type=std_logic lab=VCC}
 C {devices/opin.sym} -410 100 0 0 {name=p12 lab=OUT}
 C {devices/lab_pin.sym} 540 -10 0 1 {name=p13 sig_type=std_logic lab=OUT}
-C {pfet_01v8.sym} 480 -90 0 0 {name=M11
+C {pfet_01v8.sym} 480 -90 0 0 {name=M10
 L=5
 W=5
 nf=1
@@ -290,7 +296,7 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 40 -120 0 0 {name=p8 sig_type=std_logic lab=BIAS}
 C {devices/lab_pin.sym} 40 40 0 0 {name=p11 sig_type=std_logic lab=BIAS1}
-C {pfet_01v8.sym} 100 -10 0 0 {name=M6
+C {pfet_01v8.sym} 100 -10 0 0 {name=M5
 L=0.18
 W=5
 nf=1
@@ -304,7 +310,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {pfet_01v8.sym} 300 -10 0 1 {name=M8
+C {pfet_01v8.sym} 300 -10 0 1 {name=M7
 L=0.18
 W=5
 nf=1
@@ -318,7 +324,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {nfet_01v8.sym} 100 170 0 0 {name=M7
+C {nfet_01v8.sym} 100 170 0 0 {name=M6
 L=1
 W=5
 nf=1 
@@ -332,7 +338,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {nfet_01v8.sym} 300 170 0 1 {name=M9
+C {nfet_01v8.sym} 300 170 0 1 {name=M8
 L=1
 W=5
 nf=1 
@@ -346,7 +352,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {nfet_01v8.sym} 480 170 0 0 {name=M13
+C {nfet_01v8.sym} 480 170 0 0 {name=M12
 L=1
 W=5
 nf=1 
@@ -374,7 +380,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {nfet_01v8.sym} 480 70 0 0 {name=M12
+C {nfet_01v8.sym} 480 70 0 0 {name=M11
 L=3
 W=5
 nf=1 
@@ -402,9 +408,14 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/vsource.sym} 680 -170 0 0 {name=V1 value=0.12}
-C {devices/vsource.sym} 780 -170 0 0 {name=V2 value=0.7}
+C {devices/vsource.sym} 680 -170 0 0 {name=V1 value=0}
+C {devices/vsource.sym} 780 -170 0 0 {name=V2 value=0.9}
 C {devices/lab_pin.sym} 680 -120 0 0 {name=p17 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 780 -120 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 680 -220 0 0 {name=p19 sig_type=std_logic lab=BIAS}
 C {devices/lab_pin.sym} 780 -220 0 0 {name=p20 sig_type=std_logic lab=BIAS1}
+C {devices/capa.sym} -200 10 0 0 {name=C1
+m=1
+value=400f
+footprint=1206
+device="ceramic capacitor"}
