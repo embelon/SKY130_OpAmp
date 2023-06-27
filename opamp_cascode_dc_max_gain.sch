@@ -62,14 +62,16 @@ lab=VBIAS_B}
 N -340 -280 -340 -260 {
 lab=GND}
 N -340 -360 -340 -340 {
-lab=Vdiff}
+lab=IBIAS}
 C {devices/lab_pin.sym} 20 -80 0 1 {name=p6 lab=out}
 C {devices/vsource.sym} -500 -310 0 0 {name=Vcc value=1.8}
 C {devices/code_shown.sym} 0 -280 0 0 {name=sim only_toplevel=false value="
 .control
   save all
   dc Vdiff -0.01 0.01 0.000001
-  plot deriv(v(out)) vs Vdiff retraceplot
+  let dVout = deriv(v(out))
+  plot dVout vs Vdiff retraceplot
+  meas dc maxGain max dVout
 .endc
 "}
 C {devices/code_shown.sym} 0 -380 0 0 {name=models
@@ -101,12 +103,12 @@ C {devices/lab_pin.sym} -500 -360 3 1 {name=p5 lab=VCC}
 C {devices/lab_pin.sym} -160 -180 3 1 {name=p7 lab=VBIAS_A}
 C {devices/lab_pin.sym} -140 -180 3 1 {name=p8 lab=VBIAS_B}
 C {devices/lab_pin.sym} -160 20 1 1 {name=p9 lab=IBIAS}
-C {devices/vsource.sym} -280 -310 0 0 {name=Vcc1 value=0}
+C {devices/vsource.sym} -280 -310 0 0 {name=VbA value=0}
 C {devices/gnd.sym} -280 -260 0 0 {name=l3 lab=GND}
-C {devices/vsource.sym} -220 -310 0 0 {name=Vdiff2 value=0.9}
+C {devices/vsource.sym} -220 -310 0 0 {name=VbB value=0.9}
 C {devices/gnd.sym} -220 -260 0 0 {name=l7 lab=GND}
 C {devices/lab_pin.sym} -220 -360 3 1 {name=p10 lab=VBIAS_B}
 C {devices/lab_pin.sym} -280 -360 3 1 {name=p11 lab=VBIAS_A}
-C {devices/isource.sym} -340 -310 0 0 {name=I0 value=5.1u}
+C {devices/isource.sym} -340 -310 0 0 {name=Ib value=5.1u}
 C {devices/gnd.sym} -340 -260 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -340 -360 3 1 {name=p12 lab=IBIAS}
