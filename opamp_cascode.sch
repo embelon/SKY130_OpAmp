@@ -22,9 +22,9 @@ lab=VCC}
 N 200 -340 200 -320 {
 lab=VCC}
 N 40 -10 80 -10 {
-lab=IN_P}
-N 320 -10 360 -10 {
 lab=IN_M}
+N 320 -10 360 -10 {
+lab=#net3}
 N 280 200 280 220 {
 lab=VSS}
 N 120 200 120 220 {
@@ -46,31 +46,31 @@ lab=VSS}
 N 260 170 260 220 {
 lab=VSS}
 N 260 -10 280 -10 {
-lab=#net3}
+lab=#net4}
 N 120 -10 260 -10 {
-lab=#net3}
+lab=#net4}
 N 200 -290 220 -290 {
 lab=VCC}
 N 220 -340 220 -290 {
 lab=VCC}
 N 200 -260 200 -80 {
-lab=#net3}
+lab=#net4}
 N 320 170 460 170 {
 lab=#net2}
 N 500 200 500 220 {
 lab=VSS}
 N 500 100 500 140 {
-lab=#net4}
+lab=#net5}
 N 500 170 520 170 {
 lab=VSS}
 N 520 170 520 220 {
 lab=VSS}
 N 500 70 520 70 {
-lab=#net4}
+lab=#net5}
 N 520 70 520 120 {
-lab=#net4}
+lab=#net5}
 N 500 120 520 120 {
-lab=#net4}
+lab=#net5}
 N -60 170 80 170 {
 lab=#net1}
 N -100 200 -100 220 {
@@ -84,37 +84,37 @@ lab=VSS}
 N -120 220 -100 220 {
 lab=VSS}
 N -100 100 -100 140 {
-lab=#net5}
+lab=#net6}
 N -120 70 -100 70 {
-lab=#net5}
+lab=#net6}
 N -120 70 -120 120 {
-lab=#net5}
+lab=#net6}
 N -120 120 -100 120 {
-lab=#net5}
+lab=#net6}
 N -60 70 460 70 {
 lab=VB_B}
 N 120 -60 120 -40 {
-lab=#net3}
+lab=#net4}
 N 120 -60 280 -60 {
-lab=#net3}
+lab=#net4}
 N 280 -60 280 -40 {
-lab=#net3}
+lab=#net4}
 N 200 -80 200 -60 {
-lab=#net3}
+lab=#net4}
 N 200 -60 200 -10 {
-lab=#net3}
+lab=#net4}
 N 500 -60 500 40 {
 lab=OUT}
 N -100 -60 -100 40 {
-lab=#net6}
+lab=#net7}
 N -60 -90 460 -90 {
 lab=VB_A}
 N -100 -40 -40 -40 {
-lab=#net6}
+lab=#net7}
 N -40 -190 -40 -40 {
-lab=#net6}
+lab=#net7}
 N -60 -190 -40 -190 {
-lab=#net6}
+lab=#net7}
 N -120 -190 -100 -190 {
 lab=VCC}
 N -120 -240 -120 -190 {
@@ -138,9 +138,9 @@ lab=VCC}
 N 500 -240 520 -240 {
 lab=VCC}
 N -100 -160 -100 -120 {
-lab=#net7}
-N 500 -160 500 -120 {
 lab=#net8}
+N 500 -160 500 -120 {
+lab=#net9}
 N -260 -260 -260 -220 {
 lab=IB}
 N -260 -340 -260 -320 {
@@ -164,23 +164,23 @@ lab=IB}
 N 500 -10 540 -10 {
 lab=OUT}
 N -40 -190 460 -190 {
-lab=#net6}
+lab=#net7}
 N 500 -90 520 -90 {
-lab=#net8}
+lab=#net9}
 N 520 -140 520 -90 {
-lab=#net8}
+lab=#net9}
 N 500 -140 520 -140 {
-lab=#net8}
+lab=#net9}
 N -120 -90 -100 -90 {
-lab=#net7}
+lab=#net8}
 N -120 -140 -120 -90 {
-lab=#net7}
+lab=#net8}
 N -120 -140 -100 -140 {
-lab=#net7}
+lab=#net8}
 N -200 -40 -200 -20 {
-lab=#net6}
+lab=#net7}
 N -200 -40 -100 -40 {
-lab=#net6}
+lab=#net7}
 N -200 40 -200 220 {
 lab=VSS}
 N -200 220 -120 220 {
@@ -249,8 +249,8 @@ C {devices/ipin.sym} -350 -20 0 0 {name=p1 lab=IN_P}
 C {devices/ipin.sym} -350 0 0 0 {name=p2 lab=IN_M}
 C {devices/ipin.sym} -350 -200 0 0 {name=p3 lab=VCC}
 C {devices/ipin.sym} -350 -170 0 0 {name=p4 lab=VSS}
-C {devices/lab_pin.sym} 40 -10 0 0 {name=p6 sig_type=std_logic lab=IN_P}
-C {devices/lab_pin.sym} 360 -10 0 1 {name=p7 sig_type=std_logic lab=IN_M}
+C {devices/lab_pin.sym} 360 -10 2 0 {name=p6 sig_type=std_logic lab=IN_P}
+C {devices/lab_pin.sym} 40 -10 2 1 {name=p7 sig_type=std_logic lab=IN_M}
 C {devices/lab_pin.sym} 200 240 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 200 -360 0 0 {name=p10 sig_type=std_logic lab=VCC}
 C {devices/opin.sym} -410 60 0 0 {name=p12 lab=OUT}
