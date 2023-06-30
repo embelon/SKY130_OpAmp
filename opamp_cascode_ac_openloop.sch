@@ -100,7 +100,6 @@ C {devices/lab_pin.sym} -520 -560 3 1 {name=p4 lab=VCC}
 C {devices/lab_pin.sym} -460 -560 3 1 {name=p5 lab=Vin}
 C {devices/lab_pin.sym} -240 -360 2 1 {name=p7 lab=Vin}
 C {devices/vsource.sym} -220 -190 2 0 {name=V1 value="DC=0V AC=1V"}
-C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp_cascode.sym} -120 -320 0 0 {name=x1}
 C {devices/res.sym} -110 -140 3 0 {name=R1
 value=1k
 footprint=1206
@@ -126,3 +125,4 @@ C {devices/gnd.sym} -260 -460 0 0 {name=l7 lab=GND}
 C {devices/vsource.sym} -260 -510 0 0 {name=V6 value=0.9}
 C {devices/lab_pin.sym} -260 -560 3 1 {name=p14 lab=VBIAS_B}
 C {devices/isource.sym} -380 -510 0 0 {name=I0 value=5.1u}
+C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp_cascode.sym} -120 -320 0 0 {name=x1}
