@@ -150,7 +150,7 @@ C {devices/asrc.sym} -130 230 0 0 {name=B1 function="v=V(VoutQ)"}
 C {devices/vsource.sym} -500 -330 0 0 {name=V5 value=0}
 C {devices/gnd.sym} -500 -280 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -500 -380 3 1 {name=p3 lab=VBIAS_A}
-C {devices/vsource.sym} -440 -330 0 0 {name=V6 value=0.9}
+C {devices/vsource.sym} -440 -330 0 0 {name=V6 value=1.0}
 C {devices/gnd.sym} -440 -280 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} -440 -380 3 1 {name=p10 lab=VBIAS_B}
 C {devices/lab_pin.sym} -140 -560 3 1 {name=p11 lab=VBIAS_A}
