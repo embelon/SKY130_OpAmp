@@ -25,10 +25,6 @@ N -220 -160 -220 -140 {
 lab=Vfb}
 N -220 -280 -220 -220 {
 lab=Vinm}
-N -220 -280 -200 -280 {
-lab=Vinm}
-N -220 -360 -200 -360 {
-lab=Vin}
 N -240 -360 -220 -360 {
 lab=Vin}
 N -240 -280 -220 -280 {
@@ -67,6 +63,8 @@ N -260 -560 -260 -540 {
 lab=VBIAS_B}
 N -260 -480 -260 -460 {
 lab=GND}
+N -220 -360 -200 -360 {}
+N -220 -280 -200 -280 {}
 C {devices/lab_pin.sym} 40 -320 0 1 {name=p6 lab=Vout}
 C {devices/vsource.sym} -520 -510 0 0 {name=V3 value=1.8}
 C {devices/code_shown.sym} 160 -350 0 0 {name=sim only_toplevel=false value="
@@ -122,7 +120,8 @@ C {devices/vsource.sym} -320 -510 0 0 {name=V5 value=0}
 C {devices/lab_pin.sym} -380 -560 3 1 {name=p12 lab=IBIAS}
 C {devices/lab_pin.sym} -320 -560 3 1 {name=p13 lab=VBIAS_A}
 C {devices/gnd.sym} -260 -460 0 0 {name=l7 lab=GND}
-C {devices/vsource.sym} -260 -510 0 0 {name=V6 value=0.9}
+C {devices/vsource.sym} -260 -510 0 0 {name=V6 value=1.0
+}
 C {devices/lab_pin.sym} -260 -560 3 1 {name=p14 lab=VBIAS_B}
 C {devices/isource.sym} -380 -510 0 0 {name=I0 value=5.1u}
 C {/home/kuba/project/SKY130_OpAmp/opamp_cascode.sym} -120 -320 0 0 {name=x1}
