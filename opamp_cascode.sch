@@ -370,7 +370,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {nfet_01v8.sym} 480 70 0 0 {name=M11
-L=3
+L=5
 W=5
 nf=1 
 mult=30
@@ -384,7 +384,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {nfet_01v8.sym} -80 70 0 1 {name=M3
-L=3
+L=5
 W=5
 nf=1 
 mult=30
