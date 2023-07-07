@@ -129,7 +129,7 @@ C {devices/vsource.sym} -70 160 1 0 {name=V2 value="DC=0 AC=\{B\}"}
 C {devices/gnd.sym} -130 280 0 0 {name=l1 lab=GND}
 C {devices/capa.sym} 80 10 0 0 {name=C1
 m=1
-value=2p
+value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} -100 -350 0 0 {name=l3 lab=GND}
@@ -138,7 +138,7 @@ C {devices/lab_pin.sym} -680 -380 3 1 {name=p5 lab=Vin}
 C {devices/lab_pin.sym} -240 -120 2 1 {name=p7 lab=Vin}
 C {devices/capa.sym} 80 -370 0 0 {name=C2
 m=1
-value=2p
+value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 80 -300 0 0 {name=l7 lab=GND}

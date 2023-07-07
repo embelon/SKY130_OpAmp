@@ -70,7 +70,7 @@ C {devices/code_shown.sym} 140 -110 0 0 {name=sim only_toplevel=false value="
   save all 
   set p_num_list = ( 1 2 5 7 9 10 20 100 )
   set n_num_list = ( 3 4 6 8 11 12 )
-  set param_list = ( vds )
+  set param_list = ( vds id )
   foreach p_num $p_num_list
     foreach param $param_list
       save @m.x1.xm\{$p_num\}.msky130_fd_pr__pfet_01v8[\{$param\}]
