@@ -25,10 +25,6 @@ N -220 -160 -220 -140 {
 lab=Vfb}
 N -220 -280 -220 -220 {
 lab=Vinm}
-N -220 -280 -200 -280 {
-lab=Vinm}
-N -220 -360 -200 -360 {
-lab=Vin}
 N -240 -360 -220 -360 {
 lab=Vin}
 N -240 -280 -220 -280 {
@@ -67,6 +63,8 @@ N -260 -560 -260 -540 {
 lab=VBIAS_B}
 N -260 -480 -260 -460 {
 lab=GND}
+N -220 -360 -200 -360 {}
+N -220 -280 -200 -280 {}
 C {devices/lab_pin.sym} 40 -320 0 1 {name=p6 lab=Vout}
 C {devices/vsource.sym} -520 -510 0 0 {name=V3 value=1.8}
 C {devices/code_shown.sym} 160 -350 0 0 {name=sim only_toplevel=false value="
@@ -77,8 +75,6 @@ C {devices/code_shown.sym} 160 -350 0 0 {name=sim only_toplevel=false value="
   let mag = db(T)
   let phase = 180*cph(T)/pi
   plot mag phase xlog
-  meas ac margin find phase when mag=0
-  meas ac GBW when mag=0 
 .endc
 "}
 C {devices/code_shown.sym} 160 -450 0 0 {name=models
@@ -95,20 +91,20 @@ C {devices/vsource.sym} -460 -510 0 0 {name=V4 value=0.9}
 C {devices/lab_pin.sym} -120 -420 3 1 {name=p1 lab=VCC}
 C {devices/capa.sym} 20 -250 0 0 {name=C1
 m=1
-value=1p
+value=2p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -520 -560 3 1 {name=p4 lab=VCC}
 C {devices/lab_pin.sym} -460 -560 3 1 {name=p5 lab=Vin}
 C {devices/lab_pin.sym} -240 -360 2 1 {name=p7 lab=Vin}
-C {devices/vsource.sym} -220 -190 2 0 {name=V1 value="0 AC 1"}
+C {devices/vsource.sym} -220 -190 2 0 {name=V1 value="DC=0V AC=1V"}
 C {devices/res.sym} -110 -140 3 0 {name=R1
-value=100k
+value=1k
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} -290 -140 3 0 {name=R2
-value=100k
+value=1k
 footprint=1206
 device=resistor
 m=1}
@@ -124,7 +120,8 @@ C {devices/vsource.sym} -320 -510 0 0 {name=V5 value=0}
 C {devices/lab_pin.sym} -380 -560 3 1 {name=p12 lab=IBIAS}
 C {devices/lab_pin.sym} -320 -560 3 1 {name=p13 lab=VBIAS_A}
 C {devices/gnd.sym} -260 -460 0 0 {name=l7 lab=GND}
-C {devices/vsource.sym} -260 -510 0 0 {name=V6 value=1.0}
+C {devices/vsource.sym} -260 -510 0 0 {name=V6 value=1.0
+}
 C {devices/lab_pin.sym} -260 -560 3 1 {name=p14 lab=VBIAS_B}
 C {devices/isource.sym} -380 -510 0 0 {name=I0 value=5.1u}
 C {/home/kuba/project/SKY130_OpAmp/opamp_cascode.sym} -120 -320 0 0 {name=x1}

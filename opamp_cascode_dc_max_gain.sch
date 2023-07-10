@@ -102,13 +102,14 @@ C {devices/lab_pin.sym} -500 -360 3 1 {name=p5 lab=VCC}
 C {devices/lab_pin.sym} -160 -180 3 1 {name=p7 lab=VBIAS_A}
 C {devices/lab_pin.sym} -140 -180 3 1 {name=p8 lab=VBIAS_B}
 C {devices/lab_pin.sym} -160 20 1 1 {name=p9 lab=IBIAS}
-C {devices/vsource.sym} -280 -310 0 0 {name=VbA value=0}
+C {devices/vsource.sym} -280 -310 0 0 {name=VbA value=0.2}
 C {devices/gnd.sym} -280 -260 0 0 {name=l3 lab=GND}
-C {devices/vsource.sym} -220 -310 0 0 {name=VbB value=1.0}
+C {devices/vsource.sym} -220 -310 0 0 {name=VbB value=1.1}
 C {devices/gnd.sym} -220 -260 0 0 {name=l7 lab=GND}
 C {devices/lab_pin.sym} -220 -360 3 1 {name=p10 lab=VBIAS_B}
 C {devices/lab_pin.sym} -280 -360 3 1 {name=p11 lab=VBIAS_A}
-C {devices/isource.sym} -340 -310 0 0 {name=Ib value=5.1u}
+C {devices/isource.sym} -340 -310 0 0 {name=Ib value=5.1u
+}
 C {devices/gnd.sym} -340 -260 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -340 -360 3 1 {name=p12 lab=IBIAS}
-C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp_cascode.sym} -120 -80 0 0 {name=x1}
+C {/home/kuba/project/SKY130_OpAmp/opamp_cascode.sym} -120 -80 0 0 {name=x1}

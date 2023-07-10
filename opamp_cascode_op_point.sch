@@ -115,7 +115,6 @@ m=1
 value=1p
 footprint=1206
 device="ceramic capacitor"}
-C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp_cascode.sym} -80 200 0 0 {name=x1}
 C {devices/lab_pin.sym} -80 100 3 1 {name=p4 lab=VCC}
 C {devices/lab_pin.sym} -100 100 3 1 {name=p5 lab=VBIAS_B}
 C {devices/lab_pin.sym} -120 100 3 1 {name=p7 lab=VBIAS_A}
@@ -129,3 +128,4 @@ C {devices/vsource.sym} -80 -90 0 0 {name=V6 value=1.0}
 C {devices/gnd.sym} -80 -40 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -80 -140 3 1 {name=p11 lab=VBIAS_B}
 C {devices/isource.sym} -200 -90 0 0 {name=I0 value=5.1u}
+C {/home/kuba/project/SKY130_OpAmp/opamp_cascode.sym} -80 200 0 0 {name=x1}

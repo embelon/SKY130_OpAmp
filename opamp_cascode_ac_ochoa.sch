@@ -147,10 +147,10 @@ C {devices/lab_pin.sym} -240 -500 2 1 {name=p9 lab=Vin}
 C {devices/vsource.sym} -190 160 3 0 {name=V1 value="DC=0 AC=\{1-B\}"}
 C {devices/lab_pin.sym} 100 -460 0 1 {name=p2 lab=VoutQ}
 C {devices/asrc.sym} -130 230 0 0 {name=B1 function="v=V(VoutQ)"}
-C {devices/vsource.sym} -500 -330 0 0 {name=V5 value=0}
+C {devices/vsource.sym} -500 -330 0 0 {name=V5 value=0.2}
 C {devices/gnd.sym} -500 -280 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -500 -380 3 1 {name=p3 lab=VBIAS_A}
-C {devices/vsource.sym} -440 -330 0 0 {name=V6 value=1.0}
+C {devices/vsource.sym} -440 -330 0 0 {name=V6 value=1.1}
 C {devices/gnd.sym} -440 -280 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} -440 -380 3 1 {name=p10 lab=VBIAS_B}
 C {devices/lab_pin.sym} -140 -560 3 1 {name=p11 lab=VBIAS_A}
@@ -159,8 +159,8 @@ C {devices/lab_pin.sym} -140 -180 3 1 {name=p13 lab=VBIAS_A}
 C {devices/lab_pin.sym} -120 -180 3 1 {name=p14 lab=VBIAS_B}
 C {devices/lab_pin.sym} -140 -360 1 1 {name=p15 lab=IBIAS}
 C {devices/lab_pin.sym} -140 20 1 1 {name=p16 lab=IBIAS}
-C {devices/isource.sym} -560 -330 0 0 {name=I0 value=5.1u}
+C {devices/isource.sym} -560 -330 0 0 {name=I0 value=4.5u}
 C {devices/gnd.sym} -560 -280 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -560 -380 3 1 {name=p17 lab=IBIAS}
-C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp_cascode.sym} -100 -80 0 0 {name=x1}
-C {/home/zwierzak/projects/SKY130_OpAmp_GIT/opamp_cascode.sym} -100 -460 0 0 {name=x2}
+C {/home/kuba/project/SKY130_OpAmp/opamp_cascode.sym} -100 -80 0 0 {name=x1}
+C {/home/kuba/project/SKY130_OpAmp/opamp_cascode.sym} -100 -460 0 0 {name=x2}
