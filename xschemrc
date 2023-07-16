@@ -134,27 +134,27 @@ append XSCHEM_LIBRARY_PATH :$env(PWD)/design
 #### SOME DEFAULT BEHAVIOR
 ###########################################################################
 #### Allowed values:  spice, verilog, vhdl, tedax, default: spice
-# set netlist_type spice
+set netlist_type spice
 
 #### Some netlisting options (these are the defaults)
-# set verilog_2001 1
+set verilog_2001 1
 
 #### to use a fixed line with set change_lw to 0 and set some value to line_width
 #### these are the defaults
 # set line_width 0
-# set change_lw 1
+set change_lw 1
 
 #### allow color postscript and svg exports. Default: 1, enable color
-# set color_ps 1
+set color_ps 1
 
 #### initial size of xschem window you can specify also position with (wxh+x+y)
 #### this is the default:
-# set initial_geometry {900x600}
+set initial_geometry {900x600}
 
 #### if set to 0, when zooming out allow the viewport do drift toward the mouse position,
 #### allowing to move away by zooming / unzooming with mouse wheel
 #### default setting: 0
-# set unzoom_nodrift 0
+set unzoom_nodrift 0
 
 #### if set to 1 allow to place multiple components with same name.
 #### Warning: this is normally not allowed in any simulation netlist.
@@ -313,6 +313,7 @@ append XSCHEM_LIBRARY_PATH :$env(PWD)/design
 # set editor {gvim -f -geometry 90x28}
 # set editor { xterm -geometry 100x40 -e nano }
 # set editor { xterm -geometry 100x40 -e pico }
+set editor {gedit}
 
 #### For Windows
 # set editor {notepad.exe}
@@ -330,13 +331,13 @@ append XSCHEM_LIBRARY_PATH :$env(PWD)/design
 ###########################################################################
 #### set gaw address for socket connection: {host port}
 #### default: set to localhost, port 2020
-# set gaw_tcp_address {localhost 2020}
+set gaw_tcp_address {localhost 2020}
 
 ###########################################################################
 #### XSCHEM LISTEN TO TCP PORT
 ###########################################################################
 #### set xschem listening port; default: not enabled
-# set xschem_listen_port 2021
+set xschem_listen_port 2021
 
 ###########################################################################
 #### BESPICE WAVE SOCKET CONNECTION
@@ -370,7 +371,7 @@ append XSCHEM_LIBRARY_PATH :$env(PWD)/design
 ###########################################################################
 #### default: not enabled. Interface can be changed runtime if only one window 
 #### or tab is open.
-# set tabbed_interface 1
+set tabbed_interface 1
 
 ###########################################################################
 #### CASE INSENSITIVE SYMBOL LOOKUP
