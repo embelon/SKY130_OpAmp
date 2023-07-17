@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.1 file_version=1.2
 }
 G {}
 K {}
@@ -128,4 +128,4 @@ C {devices/vsource.sym} -80 -90 0 0 {name=V6 value=1.0}
 C {devices/gnd.sym} -80 -40 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -80 -140 3 1 {name=p11 lab=VBIAS_B}
 C {devices/isource.sym} -200 -90 0 0 {name=I0 value=5.1u}
-C {/home/kuba/project/SKY130_OpAmp/opamp_cascode.sym} -80 200 0 0 {name=x1}
+C {/home/zwierzak/projects/SKY130_OpAmp/opamp_cascode.sym} -80 200 0 0 {name=x1}
