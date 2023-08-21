@@ -96,6 +96,6 @@ C {devices/lab_pin.sym} -160 -420 3 1 {name=p10 lab=VB_A}
 C {devices/lab_pin.sym} -160 -220 1 1 {name=p11 lab=IBIAS}
 C {devices/gnd.sym} -420 -220 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -420 -320 3 1 {name=p12 lab=IBIAS}
-C {devices/isource.sym} -420 -270 0 0 {name=I0 value=5.1u}
+C {devices/isource.sym} -420 -270 0 0 {name=I0 value=4.5u}
 C {/home/zwierzak/projects/SKY130_OpAmp/opamp_cascode.sym} -120 -320 0 0 {name=x1}
 C {corner.sym} 190 -540 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
