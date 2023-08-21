@@ -38,7 +38,6 @@ Vneg Vn GND 0.9
   define Power(x,y) -(x*y)
   save all
   op
-  show
   print Power(v(VCC), Vsupply#branch)
 .endc
 "}
