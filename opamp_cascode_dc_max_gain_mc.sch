@@ -69,7 +69,7 @@ VbiasB VB_B GND 1.1
     dc Vdiff -0.01 0.01 0.000001
     let dVout = deriv(v(out))
     meas dc maxGain max dVout
-    $ wrdata dc_max_gain\{$&run\}.txt v(dVout)
+    $ wrdata dc_max_gain_mc_\{$&run\}.txt v(dVout)
     set run = "$&run"
     set dt = $curplot
     setplot $scratch
@@ -81,7 +81,7 @@ VbiasB VB_B GND 1.1
   setplot $scratch
   plot allv vs dc1.v(Vdiff) retraceplot
   set hcopydevtype = svg
-  hardcopy dc_max_gain.svg allv vs dc1.v(Vdiff)
+  hardcopy dc_max_gain_mc.svg allv vs dc1.v(Vdiff)
 .endc
 "}
 C {devices/gnd.sym} -400 60 0 0 {name=l4 lab=GND}
@@ -102,7 +102,7 @@ C {devices/lab_pin.sym} -440 -360 3 1 {name=p4 lab=Vdiff}
 C {devices/lab_pin.sym} -160 -180 3 1 {name=p7 lab=VB_A}
 C {devices/lab_pin.sym} -140 -180 3 1 {name=p8 lab=VB_B}
 C {devices/lab_pin.sym} -160 20 1 1 {name=p9 lab=IBIAS}
-C {devices/isource.sym} -340 -310 0 0 {name=Ib value=4.5u
+C {devices/isource.sym} -340 -310 0 0 {name=Ib value=45u
 }
 C {devices/gnd.sym} -340 -260 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -340 -360 3 1 {name=p12 lab=IBIAS}
