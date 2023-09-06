@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.4.1 file_version=1.2
 }
 G {}
 K {}
@@ -221,7 +221,7 @@ C {pfet_01v8.sym} 180 -290 0 0 {name=M100
 L=3
 W=5
 nf=1
-mult=60
+mult=6
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
