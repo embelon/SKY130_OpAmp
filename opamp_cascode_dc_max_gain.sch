@@ -63,8 +63,7 @@ VbiasB VB_B GND 1.1
   plot dVout vs Vdiff retraceplot
   meas dc maxGain max dVout
   set hcopydevtype = svg
-  hardcopy test.svg dVout vs Vdiff
-  quit
+  hardcopy dc_max_gain.svg dVout vs Vdiff
 .endc
 "}
 C {devices/gnd.sym} -400 60 0 0 {name=l4 lab=GND}
@@ -85,7 +84,7 @@ C {devices/lab_pin.sym} -440 -360 3 1 {name=p4 lab=Vdiff}
 C {devices/lab_pin.sym} -160 -180 3 1 {name=p7 lab=VB_A}
 C {devices/lab_pin.sym} -140 -180 3 1 {name=p8 lab=VB_B}
 C {devices/lab_pin.sym} -160 20 1 1 {name=p9 lab=IBIAS}
-C {devices/isource.sym} -340 -310 0 0 {name=Ib value=5.1u
+C {devices/isource.sym} -340 -310 0 0 {name=Ib value=45u
 }
 C {devices/gnd.sym} -340 -260 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -340 -360 3 1 {name=p12 lab=IBIAS}
