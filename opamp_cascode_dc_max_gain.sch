@@ -58,7 +58,7 @@ VbiasA VB_A GND 0.2
 VbiasB VB_B GND 1.1
 .control
   save all
-  dc Vdiff -0.01 0.01 0.000001
+  dc Vdiff -0.01 0.01 0.00001
   let dVout = deriv(v(out))
   plot dVout vs Vdiff retraceplot
   meas dc maxGain max dVout
