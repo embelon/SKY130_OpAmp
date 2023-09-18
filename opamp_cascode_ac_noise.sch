@@ -58,6 +58,6 @@ C {devices/lab_pin.sym} -160 20 1 1 {name=p9 lab=IBIAS}
 C {/home/zwierzak/projects/SKY130_OpAmp/opamp_cascode.sym} -120 -80 0 0 {name=x1}
 C {corner.sym} 100 -290 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
 C {devices/gnd.sym} -280 -200 0 0 {name=l1 lab=GND}
-C {devices/isource.sym} -280 -230 0 0 {name=I0 value=4.5u}
+C {devices/isource.sym} -280 -230 0 0 {name=I0 value=45u}
 C {devices/lab_pin.sym} -280 -260 3 1 {name=p3 lab=IBIAS}
 C {devices/lab_pin.sym} -220 -40 2 1 {name=p4 lab=Vn}

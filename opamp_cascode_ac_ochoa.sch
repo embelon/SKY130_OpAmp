@@ -129,7 +129,7 @@ C {devices/lab_pin.sym} -140 -180 3 1 {name=p13 lab=VB_A}
 C {devices/lab_pin.sym} -120 -180 3 1 {name=p14 lab=VB_B}
 C {devices/lab_pin.sym} -140 -360 1 1 {name=p15 lab=IBIAS}
 C {devices/lab_pin.sym} -140 20 1 1 {name=p16 lab=IBIAS}
-C {devices/isource.sym} -400 -510 0 0 {name=I0 value=4.5u}
+C {devices/isource.sym} -400 -510 0 0 {name=I0 value=45u}
 C {devices/gnd.sym} -400 -460 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -400 -560 3 1 {name=p17 lab=IBIAS}
 C {/home/zwierzak/projects/SKY130_OpAmp/opamp_cascode.sym} -100 -80 0 0 {name=x1}
