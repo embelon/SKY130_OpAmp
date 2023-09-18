@@ -121,11 +121,11 @@ C {devices/lab_pin.sym} -120 100 3 1 {name=p7 lab=VBIAS_A}
 C {devices/lab_pin.sym} -120 300 1 1 {name=p8 lab=IBIAS}
 C {devices/gnd.sym} -200 -40 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} -200 -140 3 1 {name=p9 lab=IBIAS}
-C {devices/vsource.sym} -140 -90 0 0 {name=V5 value=0}
+C {devices/vsource.sym} -140 -90 0 0 {name=V5 value=0.2}
 C {devices/gnd.sym} -140 -40 0 0 {name=l7 lab=GND}
 C {devices/lab_pin.sym} -140 -140 3 1 {name=p10 lab=VBIAS_A}
-C {devices/vsource.sym} -80 -90 0 0 {name=V6 value=1.0}
+C {devices/vsource.sym} -80 -90 0 0 {name=V6 value=1.1}
 C {devices/gnd.sym} -80 -40 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -80 -140 3 1 {name=p11 lab=VBIAS_B}
-C {devices/isource.sym} -200 -90 0 0 {name=I0 value=5.1u}
+C {devices/isource.sym} -200 -90 0 0 {name=I0 value=45u}
 C {/home/zwierzak/projects/SKY130_OpAmp/opamp_cascode.sym} -80 200 0 0 {name=x1}
