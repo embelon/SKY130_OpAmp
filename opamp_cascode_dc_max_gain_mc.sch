@@ -59,7 +59,7 @@ VbiasB VB_B GND 1.1
 .control
   set wr_vecnames
   set wr_singlescale
-  let mc_runs=25
+  let mc_runs=10
   let run=1
   set curplot=new
   set scratch=$curplot
