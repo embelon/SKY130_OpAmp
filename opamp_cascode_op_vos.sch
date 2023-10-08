@@ -78,7 +78,7 @@ device="ceramic capacitor"}
 C {devices/lab_pin.sym} -160 -180 3 1 {name=p7 lab=VB_A}
 C {devices/lab_pin.sym} -140 -180 3 1 {name=p8 lab=VB_B}
 C {devices/lab_pin.sym} -160 20 1 1 {name=p9 lab=IBIAS}
-C {/home/zwierzak/projects/SKY130_OpAmp/opamp_cascode.sym} -120 -80 0 0 {name=x1}
+C {./opamp_cascode.sym} -120 -80 0 0 {name=x1}
 C {corner.sym} 100 -290 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/gnd.sym} -400 -200 0 0 {name=l1 lab=GND}
 C {devices/isource.sym} -400 -230 0 0 {name=I0 value=45u}

@@ -128,4 +128,4 @@ C {devices/vsource.sym} -80 -90 0 0 {name=V6 value=1.1}
 C {devices/gnd.sym} -80 -40 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -80 -140 3 1 {name=p11 lab=VBIAS_B}
 C {devices/isource.sym} -200 -90 0 0 {name=I0 value=45u}
-C {/home/zwierzak/projects/SKY130_OpAmp/opamp_cascode.sym} -80 200 0 0 {name=x1}
+C {./opamp_cascode.sym} -80 200 0 0 {name=x1}
