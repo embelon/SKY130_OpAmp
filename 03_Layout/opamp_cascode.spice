@@ -1,336 +1,113 @@
-** sch_path: /home/zwierzak/projects/SKY130_OpAmp/03_Layout/opamp_cascode.sch
-**.subckt opamp_cascode IN_P IN_M VCC VSS OUT VB_A VB_B IB
-*.ipin IN_P
-*.ipin IN_M
-*.ipin VCC
-*.ipin VSS
-*.opin OUT
-*.ipin VB_A
-*.ipin VB_B
-*.ipin IB
-XM100_3 IB IB VCC VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=2 m=2
-XM10 OUT VB_A m9m10 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM2 bias1 VB_A m1m2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM5 bias3 IN_M m100m5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM7 bias21 IN_P m100m5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM6 bias3 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM8 bias21 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM12 m11m12 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM11 OUT VB_B m11m12 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM3 bias1 VB_B m3m4 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM100_1 m100m5 IB VCC VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=3 m=3
-XM5_1 bias3 IN_M m100m5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=15 m=15
-XM7_1 bias21 IN_P m100m5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=15 m=15
-XM9 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM9_1 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM9_2 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM9_3 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM9_4 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM1 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM1_1 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM1_2 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM1_3 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM1_4 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=100 m=100
-XM100_2 m100m5 IB VCC VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=3 m=3
-XM10_1 OUT VB_A m9m10 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM2_1 bias1 VB_A m1m2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM3_1 bias1 VB_B m3m4 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM11_1 OUT VB_B m11m12 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=15 m=15
-XM4 m3m4 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM6_1 bias3 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM8_1 bias21 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM6_2 bias3 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM6_3 bias3 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_1 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=102 m=102
-XM9_dummy_2 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=102 m=102
-XM9_dummy_3 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_4 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_5 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_6 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_7 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_8 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_9 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_10 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_11 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_12 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM100_dummy_1 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=5 m=5
-XM100_dummy_2 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=5 m=5
-XM100_dummy_3 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
-XM100_dummy_4 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
-XM100_dummy_5 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM100_dummy_6 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM100_dummy_7 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM100_dummy_8 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM100_dummy_9 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM100_dummy_10 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2_dummy_1 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=17 m=17
-XM2_dummy_2 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=17 m=17
-XM2_dummy_3 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2_dummy_4 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2_dummy_5 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2_dummy_6 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2_dummy_7 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2_dummy_8 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2_dummy_9 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2_dummy_10 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM5_dummy_1 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=17 m=17
-XM5_dummy_2 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=17 m=17
-XM5_dummy_3 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM5_dummy_4 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM5_dummy_5 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM5_dummy_6 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM5_dummy_7 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM5_dummy_8 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM5_dummy_9 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM5_dummy_10 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM4_dummy_1 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=6 m=6
-XM4_dummy_2 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=6 m=6
-XM4_dummy_3 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM4_dummy_4 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM4_dummy_5 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM4_dummy_6 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM4_dummy_7 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM4_dummy_8 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM4_dummy_9 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM4_dummy_10 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM8_2 bias21 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM8_3 bias21 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM100_4 IB IB VCC VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=2 m=2
-XM3_dummy_1 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=17 m=17
-XM3_dummy_2 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=17 m=17
-XM3_dummy_3 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM3_dummy_4 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM3_dummy_5 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM3_dummy_6 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM3_dummy_7 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM3_dummy_8 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM3_dummy_9 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM3_dummy_10 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_13 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_14 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_15 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_16 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_17 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_18 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_19 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_20 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_21 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM9_dummy_22 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
-+ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-**.ends
+** sch_path: ./opamp_cascode.sch
+.subckt opamp_cascode IN_P IN_M VCC VSS OUT VB_A VB_B IB
+*.PININFO IN_P:I IN_M:I VCC:I VSS:I OUT:O VB_A:I VB_B:I IB:I
+XM100_3 IB IB VCC VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=2
+XM10 OUT VB_A m9m10 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=15
+XM2 bias1 VB_A m1m2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=15
+XM5 bias3 IN_M m100m5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=15
+XM7 bias21 IN_P m100m5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=15
+XM6 bias3 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM8 bias21 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM12 m11m12 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=5 nf=1 m=1
+XM11 OUT VB_B m11m12 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=15
+XM3 bias1 VB_B m3m4 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=15
+XM100_1 m100m5 IB VCC VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=3
+XM5_1 bias3 IN_M m100m5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=15
+XM7_1 bias21 IN_P m100m5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=15
+XM9 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM9_1 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM9_2 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM9_3 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM9_4 m9m10 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM1 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM1_1 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM1_2 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM1_3 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM1_4 m1m2 bias1 VCC VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=100
+XM100_2 m100m5 IB VCC VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=3
+XM10_1 OUT VB_A m9m10 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=15
+XM2_1 bias1 VB_A m1m2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=15
+XM3_1 bias1 VB_B m3m4 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=15
+XM11_1 OUT VB_B m11m12 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=15
+XM4 m3m4 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=5 nf=1 m=1
+XM6_1 bias3 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM8_1 bias21 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM6_2 bias3 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM6_3 bias3 bias3 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM9_dummy_1 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=102
+XM9_dummy_2 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=102
+XM9_dummy_3 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_4 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_5 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_6 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_7 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_8 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_9 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_10 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_11 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_12 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM100_dummy_1 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=5
+XM100_dummy_2 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=5
+XM100_dummy_3 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=2
+XM100_dummy_4 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=2
+XM100_dummy_5 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=1
+XM100_dummy_6 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=1
+XM100_dummy_7 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=1
+XM100_dummy_8 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=1
+XM100_dummy_9 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=1
+XM100_dummy_10 dummy_100 IB dummy_100 VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=1
+XM2_dummy_1 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=17
+XM2_dummy_2 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=17
+XM2_dummy_3 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=1
+XM2_dummy_4 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=1
+XM2_dummy_5 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=1
+XM2_dummy_6 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=1
+XM2_dummy_7 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=1
+XM2_dummy_8 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=1
+XM2_dummy_9 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=1
+XM2_dummy_10 dummy_2 VB_A dummy_2 VCC sky130_fd_pr__pfet_01v8 L=5 W=5 nf=1 m=1
+XM5_dummy_1 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=17
+XM5_dummy_2 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=17
+XM5_dummy_3 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=1
+XM5_dummy_4 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=1
+XM5_dummy_5 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=1
+XM5_dummy_6 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=1
+XM5_dummy_7 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=1
+XM5_dummy_8 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=1
+XM5_dummy_9 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=1
+XM5_dummy_10 dummy_5 IN_P dummy_5 VCC sky130_fd_pr__pfet_01v8 L=0.18 W=5 nf=1 m=1
+XM4_dummy_1 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=6
+XM4_dummy_2 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=6
+XM4_dummy_3 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM4_dummy_4 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM4_dummy_5 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM4_dummy_6 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM4_dummy_7 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM4_dummy_8 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM4_dummy_9 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM4_dummy_10 dummy_4 bias3 dummy_4 VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM8_2 bias21 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM8_3 bias21 bias21 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=1.25 nf=1 m=1
+XM100_4 IB IB VCC VCC sky130_fd_pr__pfet_01v8 L=3 W=5 nf=1 m=2
+XM3_dummy_1 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=17
+XM3_dummy_2 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=17
+XM3_dummy_3 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=1
+XM3_dummy_4 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=1
+XM3_dummy_5 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=1
+XM3_dummy_6 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=1
+XM3_dummy_7 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=1
+XM3_dummy_8 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=1
+XM3_dummy_9 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=1
+XM3_dummy_10 dummy_3 VB_B dummy_3 VSS sky130_fd_pr__nfet_01v8 L=5 W=5 nf=1 m=1
+XM9_dummy_13 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_14 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_15 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_16 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_17 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_18 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_19 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_20 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_21 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+XM9_dummy_22 dummy_9 bias1 dummy_9 VCC sky130_fd_pr__pfet_01v8 L=15 W=5 nf=1 m=1
+.ends
 .end
