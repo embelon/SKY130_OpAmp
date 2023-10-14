@@ -59,7 +59,7 @@ VbiasB VB_B GND 1.1
 .control
   set wr_vecnames
   set wr_singlescale
-  let mc_runs=10
+  let mc_runs=25
   let run=1
   set curplot=new
   set scratch=$curplot
@@ -106,7 +106,7 @@ C {devices/isource.sym} -340 -310 0 0 {name=Ib value=45u
 }
 C {devices/gnd.sym} -340 -260 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -340 -360 3 1 {name=p12 lab=IBIAS}
-C {./opamp_cascode.sym} -120 -80 0 0 {name=x1}
+C {../design/opamp_cascode.sym} -120 -80 0 0 {name=x1}
 C {corner.sym} -100 -390 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
 C {devices/asrc.sym} -350 -120 1 0 {name=B1 function="v=v(Vdiff)"}
 C {devices/asrc.sym} -290 -40 3 0 {name=B2 function="v=v(Vdiff)"}
