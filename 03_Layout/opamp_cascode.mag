@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1697730802
+timestamp 1697746166
 << nwell >>
 rect 60000 90000 106000 144400
 rect 38000 16600 106000 90000
@@ -2923,26 +2923,20 @@ flabel metal1 51740 67560 51780 67640 0 FreeSans 1600 0 0 0 dummy_2
 flabel metal1 51720 93180 51780 93240 0 FreeSans 1600 0 0 0 dummy_3
 flabel metal1 50800 130740 50820 130760 0 FreeSans 1600 0 0 0 dummy_4
 flabel metal1 104760 16940 104820 17040 0 FreeSans 1600 0 0 0 dummy_9
-flabel metal3 33460 113060 33660 113260 0 FreeSans 256 0 0 0 VB_B
-port 6 nsew
-flabel metal3 33400 112600 33800 112800 0 FreeSans 256 0 0 0 VB_B
-flabel metal3 33520 139820 33720 140020 0 FreeSans 256 0 0 0 VCC
-port 2 nsew
-flabel metal3 33340 143440 33540 143640 0 FreeSans 256 0 0 0 VSS
-port 3 nsew
-flabel metal3 33800 144000 34200 144200 0 FreeSans 256 0 0 0 VSS
-flabel metal3 33605 90664 33805 90864 0 FreeSans 3200 0 0 0 OUT
-port 4 nsew
-flabel metal3 33400 86800 33800 87000 0 FreeSans 256 0 0 0 VB_A
-flabel metal3 33500 86480 33700 86680 0 FreeSans 256 0 0 0 VB_A
-port 5 nsew
-flabel metal3 33400 54800 33800 55000 0 FreeSans 256 0 0 0 IB
-flabel metal3 32940 54440 33140 54640 0 FreeSans 256 0 0 0 IB
-port 7 nsew
-flabel metal3 33660 18560 33860 18760 0 FreeSans 256 0 0 0 IN_M
-port 1 nsew
-flabel metal3 33400 19000 33800 19200 0 FreeSans 256 0 0 0 IN_M
-flabel metal3 33400 14800 33800 15000 0 FreeSans 256 0 0 0 IN_P
-flabel metal3 33360 14320 33560 14520 0 FreeSans 256 0 0 0 IN_P
-port 0 nsew
+flabel metal3 32800 112000 34800 114000 0 FreeSans 3200 0 0 0 VB_B
+port 6 nsew signal bidirectional
+flabel metal3 32800 90000 34800 92000 0 FreeSans 3200 0 0 0 OUT
+port 4 nsew signal bidirectional
+flabel metal3 32800 86000 34800 88000 0 FreeSans 3200 0 0 0 VB_A
+port 5 nsew signal bidirectional
+flabel metal3 32800 54000 34800 56000 0 FreeSans 3200 0 0 0 IB
+port 7 nsew signal bidirectional
+flabel metal3 32800 18000 34800 20000 0 FreeSans 3200 0 0 0 IN_M
+port 1 nsew signal bidirectional
+flabel metal3 32800 14000 34800 16000 0 FreeSans 3200 0 0 0 IN_P
+port 0 nsew signal bidirectional
+flabel metal3 32800 143000 34800 145000 0 FreeSans 3200 0 0 0 VSS
+port 3 nsew ground bidirectional
+flabel metal3 32800 139000 34800 141000 0 FreeSans 3200 0 0 0 VCC
+port 2 nsew power bidirectional
 << end >>
