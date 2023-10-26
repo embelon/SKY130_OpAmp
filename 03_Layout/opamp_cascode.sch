@@ -841,146 +841,6 @@ N 2030 -1080 2110 -1080 {
 lab=dummy_2}
 N 2030 -1100 2030 -1080 {
 lab=dummy_2}
-N 2260 -1610 2330 -1610 {
-lab=IN_P}
-N 2370 -1660 2370 -1640 {
-lab=dummy_5}
-N 2370 -1660 2450 -1660 {
-lab=dummy_5}
-N 2450 -1660 2450 -1570 {
-lab=dummy_5}
-N 2450 -1570 2450 -1560 {
-lab=dummy_5}
-N 2370 -1560 2450 -1560 {
-lab=dummy_5}
-N 2370 -1580 2370 -1560 {
-lab=dummy_5}
-N 2260 -1490 2330 -1490 {
-lab=IN_P}
-N 2370 -1540 2370 -1520 {
-lab=dummy_5}
-N 2370 -1540 2450 -1540 {
-lab=dummy_5}
-N 2450 -1540 2450 -1450 {
-lab=dummy_5}
-N 2450 -1450 2450 -1440 {
-lab=dummy_5}
-N 2370 -1440 2450 -1440 {
-lab=dummy_5}
-N 2370 -1460 2370 -1440 {
-lab=dummy_5}
-N 2260 -1370 2330 -1370 {
-lab=IN_P}
-N 2370 -1420 2370 -1400 {
-lab=dummy_5}
-N 2370 -1420 2450 -1420 {
-lab=dummy_5}
-N 2450 -1420 2450 -1330 {
-lab=dummy_5}
-N 2450 -1330 2450 -1320 {
-lab=dummy_5}
-N 2370 -1320 2450 -1320 {
-lab=dummy_5}
-N 2370 -1340 2370 -1320 {
-lab=dummy_5}
-N 2260 -1250 2330 -1250 {
-lab=IN_P}
-N 2370 -1300 2370 -1280 {
-lab=dummy_5}
-N 2370 -1300 2450 -1300 {
-lab=dummy_5}
-N 2450 -1300 2450 -1210 {
-lab=dummy_5}
-N 2450 -1210 2450 -1200 {
-lab=dummy_5}
-N 2370 -1200 2450 -1200 {
-lab=dummy_5}
-N 2370 -1220 2370 -1200 {
-lab=dummy_5}
-N 2260 -1130 2330 -1130 {
-lab=IN_P}
-N 2370 -1180 2370 -1160 {
-lab=dummy_5}
-N 2370 -1180 2450 -1180 {
-lab=dummy_5}
-N 2450 -1180 2450 -1090 {
-lab=dummy_5}
-N 2450 -1090 2450 -1080 {
-lab=dummy_5}
-N 2370 -1080 2450 -1080 {
-lab=dummy_5}
-N 2370 -1100 2370 -1080 {
-lab=dummy_5}
-N 2510 -1610 2580 -1610 {
-lab=IN_P}
-N 2620 -1660 2620 -1640 {
-lab=dummy_5}
-N 2620 -1660 2700 -1660 {
-lab=dummy_5}
-N 2700 -1660 2700 -1570 {
-lab=dummy_5}
-N 2700 -1570 2700 -1560 {
-lab=dummy_5}
-N 2620 -1560 2700 -1560 {
-lab=dummy_5}
-N 2620 -1580 2620 -1560 {
-lab=dummy_5}
-N 2510 -1490 2580 -1490 {
-lab=IN_P}
-N 2620 -1540 2620 -1520 {
-lab=dummy_5}
-N 2620 -1540 2700 -1540 {
-lab=dummy_5}
-N 2700 -1540 2700 -1450 {
-lab=dummy_5}
-N 2700 -1450 2700 -1440 {
-lab=dummy_5}
-N 2620 -1440 2700 -1440 {
-lab=dummy_5}
-N 2620 -1460 2620 -1440 {
-lab=dummy_5}
-N 2510 -1370 2580 -1370 {
-lab=IN_P}
-N 2620 -1420 2620 -1400 {
-lab=dummy_5}
-N 2620 -1420 2700 -1420 {
-lab=dummy_5}
-N 2700 -1420 2700 -1330 {
-lab=dummy_5}
-N 2700 -1330 2700 -1320 {
-lab=dummy_5}
-N 2620 -1320 2700 -1320 {
-lab=dummy_5}
-N 2620 -1340 2620 -1320 {
-lab=dummy_5}
-N 2510 -1250 2580 -1250 {
-lab=IN_P}
-N 2620 -1300 2620 -1280 {
-lab=dummy_5}
-N 2620 -1300 2700 -1300 {
-lab=dummy_5}
-N 2700 -1300 2700 -1210 {
-lab=dummy_5}
-N 2700 -1210 2700 -1200 {
-lab=dummy_5}
-N 2620 -1200 2700 -1200 {
-lab=dummy_5}
-N 2620 -1220 2620 -1200 {
-lab=dummy_5}
-N 2510 -1130 2580 -1130 {
-lab=IN_P}
-N 2620 -1180 2620 -1160 {
-lab=dummy_5}
-N 2620 -1180 2700 -1180 {
-lab=dummy_5}
-N 2700 -1180 2700 -1090 {
-lab=dummy_5}
-N 2700 -1090 2700 -1080 {
-lab=dummy_5}
-N 2620 -1080 2700 -1080 {
-lab=dummy_5}
-N 2620 -1100 2620 -1080 {
-lab=dummy_5}
 N 2910 -1610 2980 -1610 {
 lab=bias3}
 N 3020 -1660 3020 -1640 {
@@ -1449,10 +1309,6 @@ N 3350 -1660 3350 -1080 {
 lab=dummy_4}
 N 3100 -1660 3100 -1080 {
 lab=dummy_4}
-N 2700 -1650 2700 -1080 {
-lab=dummy_5}
-N 2450 -1660 2450 -1080 {
-lab=dummy_5}
 N 520 240 600 240 {
 lab=VSS}
 N 620 190 680 190 {
@@ -1670,46 +1526,6 @@ lab=VCC}
 N 2030 -1610 2050 -1610 {
 lab=VCC}
 N 2050 -1610 2090 -1610 {
-lab=VCC}
-N 2370 -1130 2390 -1130 {
-lab=VCC}
-N 2390 -1130 2430 -1130 {
-lab=VCC}
-N 2370 -1250 2390 -1250 {
-lab=VCC}
-N 2390 -1250 2430 -1250 {
-lab=VCC}
-N 2370 -1370 2390 -1370 {
-lab=VCC}
-N 2390 -1370 2430 -1370 {
-lab=VCC}
-N 2370 -1490 2390 -1490 {
-lab=VCC}
-N 2390 -1490 2430 -1490 {
-lab=VCC}
-N 2370 -1610 2390 -1610 {
-lab=VCC}
-N 2390 -1610 2430 -1610 {
-lab=VCC}
-N 2620 -1130 2640 -1130 {
-lab=VCC}
-N 2640 -1130 2680 -1130 {
-lab=VCC}
-N 2620 -1250 2640 -1250 {
-lab=VCC}
-N 2640 -1250 2680 -1250 {
-lab=VCC}
-N 2620 -1370 2640 -1370 {
-lab=VCC}
-N 2640 -1370 2680 -1370 {
-lab=VCC}
-N 2620 -1490 2640 -1490 {
-lab=VCC}
-N 2640 -1490 2680 -1490 {
-lab=VCC}
-N 2620 -1610 2640 -1610 {
-lab=VCC}
-N 2640 -1610 2680 -1610 {
 lab=VCC}
 N 3020 -1130 3040 -1130 {
 lab=VSS}
@@ -2861,184 +2677,6 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1950 -1130 0 0 {name=p85 sig_type=std_logic lab=VB_A
 }
-C {pfet_01v8.sym} 2350 -1610 0 0 {name=M5_dummy_1
-L=0.18
-W=5
-nf=1
-mult=17
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2290 -1610 0 0 {name=p86 sig_type=std_logic lab=IN_P
-}
-C {pfet_01v8.sym} 2350 -1490 0 0 {name=M5_dummy_2
-L=0.18
-W=5
-nf=1
-mult=17
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2290 -1490 0 0 {name=p87 sig_type=std_logic lab=IN_P
-}
-C {pfet_01v8.sym} 2350 -1370 0 0 {name=M5_dummy_3
-L=0.18
-W=5
-nf=1
-mult=1
-
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2290 -1370 0 0 {name=p88 sig_type=std_logic lab=IN_P
-}
-C {pfet_01v8.sym} 2350 -1250 0 0 {name=M5_dummy_4
-L=0.18
-W=5
-nf=1
-mult=1
-
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2290 -1250 0 0 {name=p89 sig_type=std_logic lab=IN_P
-}
-C {pfet_01v8.sym} 2350 -1130 0 0 {name=M5_dummy_5
-L=0.18
-W=5
-nf=1
-mult=1
-
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2290 -1130 0 0 {name=p90 sig_type=std_logic lab=IN_P
-}
-C {pfet_01v8.sym} 2600 -1610 0 0 {name=M5_dummy_6
-L=0.18
-W=5
-nf=1
-mult=1
-
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2540 -1610 0 0 {name=p91 sig_type=std_logic lab=IN_P
-}
-C {pfet_01v8.sym} 2600 -1490 0 0 {name=M5_dummy_7
-L=0.18
-W=5
-nf=1
-mult=1
-
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2540 -1490 0 0 {name=p92 sig_type=std_logic lab=IN_P
-}
-C {pfet_01v8.sym} 2600 -1370 0 0 {name=M5_dummy_8
-L=0.18
-W=5
-nf=1
-mult=1
-
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2540 -1370 0 0 {name=p93 sig_type=std_logic lab=IN_P
-}
-C {pfet_01v8.sym} 2600 -1250 0 0 {name=M5_dummy_9
-L=0.18
-W=5
-nf=1
-mult=1
-
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2540 -1250 0 0 {name=p94 sig_type=std_logic lab=IN_P
-}
-C {pfet_01v8.sym} 2600 -1130 0 0 {name=M5_dummy_10
-L=0.18
-W=5
-nf=1
-mult=1
-
-
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 2540 -1130 0 0 {name=p95 sig_type=std_logic lab=IN_P
-}
 C {nfet_01v8.sym} 3000 -1610 0 0 {name=M4_dummy_1
 L=1
 W=1.25
@@ -3624,10 +3262,6 @@ C {devices/lab_pin.sym} 1810 -1660 1 0 {name=p129 sig_type=std_logic lab=dummy_2
 }
 C {devices/lab_pin.sym} 2080 -1660 1 0 {name=p130 sig_type=std_logic lab=dummy_2
 }
-C {devices/lab_pin.sym} 2400 -1660 1 0 {name=p131 sig_type=std_logic lab=dummy_5
-}
-C {devices/lab_pin.sym} 2670 -1660 1 0 {name=p132 sig_type=std_logic lab=dummy_5
-}
 C {devices/lab_pin.sym} 3030 -1660 1 0 {name=p133 sig_type=std_logic lab=dummy_4
 }
 C {devices/lab_pin.sym} 3300 -1660 1 0 {name=p134 sig_type=std_logic lab=dummy_4
@@ -3704,16 +3338,6 @@ C {devices/lab_pin.sym} 2090 -1250 0 0 {name=p205 sig_type=std_logic lab=VCC}
 C {devices/lab_pin.sym} 2090 -1370 0 0 {name=p206 sig_type=std_logic lab=VCC}
 C {devices/lab_pin.sym} 2090 -1490 0 0 {name=p207 sig_type=std_logic lab=VCC}
 C {devices/lab_pin.sym} 2090 -1610 0 0 {name=p208 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2430 -1130 0 0 {name=p209 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2430 -1250 0 0 {name=p210 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2430 -1370 0 0 {name=p211 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2430 -1490 0 0 {name=p212 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2430 -1610 0 0 {name=p213 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2680 -1130 0 0 {name=p214 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2680 -1250 0 0 {name=p215 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2680 -1370 0 0 {name=p216 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2680 -1490 0 0 {name=p217 sig_type=std_logic lab=VCC}
-C {devices/lab_pin.sym} 2680 -1610 0 0 {name=p218 sig_type=std_logic lab=VCC}
 C {devices/lab_pin.sym} 3080 -1610 0 0 {name=p219 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 3080 -1490 0 0 {name=p220 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 3080 -1370 0 0 {name=p221 sig_type=std_logic lab=VSS}
