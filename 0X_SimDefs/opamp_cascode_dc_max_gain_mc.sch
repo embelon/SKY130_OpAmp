@@ -59,26 +59,25 @@ VbiasB VB_B GND 1.1
 .control
   set wr_vecnames
   set wr_singlescale
-  let mc_runs=25
+  let mc_runs=3
   let run=1
   set curplot=new
-  set scratch=$curplot
-  setplot $scratch
+  set final=$curplot
+  setplot $final
   dowhile run <= mc_runs
     save all
     dc Vdiff -0.01 0.01 0.000001
     let dVout = deriv(v(out))
     meas dc maxGain max dVout
-    $ wrdata dc_max_gain_mc_\{$&run\}.txt v(dVout)
-    set run = "$&run"
     set dt = $curplot
-    setplot $scratch
-    let dVout\{$run\}=\{$dt\}.v(dVout)
+    setplot $final
+    let dVout\{$&run\}=\{$dt\}.v(dVout)
+    let maxGain\{$&run\}=\{$dt\}.maxGain
     setplot $dt
     reset
     let run = run + 1
   end
-  setplot $scratch
+  setplot $final
   plot allv vs dc1.v(Vdiff) retraceplot
   set hcopydevtype = svg
   hardcopy dc_max_gain_mc.svg allv vs dc1.v(Vdiff)
