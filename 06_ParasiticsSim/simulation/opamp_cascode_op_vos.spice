@@ -1,0 +1,37 @@
+** sch_path: /home/zwierzak/projects/SKY130_OpAmp/06_ParasiticsSim/opamp_cascode_op_vos.sch
+**.subckt opamp_cascode_op_vos
+C1 out GND 1p m=1
+x1 VCC GND VB_B net2 net1 out IBIAS VB_A opamp_cascode
+I0 IBIAS GND 45u
+R1 net2 net1 100 m=1
+R3 out net1 100k m=1
+R4 cm net2 100k m=1
+Vcm cm GND 0.9
+.save i(vcm)
+**** begin user architecture code
+
+
+.include ../opamp_cascode.spice
+Vsupply VCC GND 1.8
+VbiasA VB_A GND 0.2
+VbiasB VB_B GND 1.1
+.control
+  save all
+  op
+  let Vos = v(out)-v(cm)
+  echo $&Vos
+.endc
+
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

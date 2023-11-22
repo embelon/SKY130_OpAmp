@@ -1,0 +1,48 @@
+** sch_path: /home/zwierzak/projects/SKY130_OpAmp/06_ParasiticsSim/opamp_cascode_ac_ochoa.sch
+**.subckt opamp_cascode_ac_ochoa
+V2 Vout net1 DC=0 AC={B}
+.save i(v2)
+C1 Vout GND 1p m=1
+C2 VoutQ GND 1p m=1
+V1 net2 net1 DC=0 AC={1-B}
+.save i(v1)
+B1 net1 GND v=V(VoutQ)
+I0 IBIAS GND 45u
+x1 VCC GND VB_B Vp net2 Vout IBIAS VB_A opamp_cascode
+x2 VCC GND VB_B Vp VoutQ VoutQ IBIAS VB_A opamp_cascode
+**** begin user architecture code
+
+
+Vsupply VCC GND 1.8
+VbiasA VB_A GND 0.2
+VbiasB VB_B GND 1.1
+Vin Vp GND 0.9
+.param B=0
+.include ../opamp_cascode.spice
+.control
+  ac dec 10 1 1G
+  alterparam B=1
+  reset
+  ac dec 10 1 1G
+  setplot new
+  set curplottitle=OpenLoopGain
+  let frequency = ac1.frequency
+  let T = (ac1.i(V2) + ac2.i(V1)) / (ac1.i(V1) + ac2.i(V2))
+  let mag = db(T)
+  let phase = 180*cph(T)/pi
+  plot mag phase xlog
+.endc
+
+
+
+.param mc_mm_switch=1
+.param mc_pr_switch=0
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

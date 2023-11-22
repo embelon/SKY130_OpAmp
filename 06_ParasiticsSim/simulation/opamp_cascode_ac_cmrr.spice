@@ -1,0 +1,43 @@
+** sch_path: /home/zwierzak/projects/SKY130_OpAmp/06_ParasiticsSim/opamp_cascode_ac_cmrr.sch
+**.subckt opamp_cascode_ac_cmrr
+C1 out GND 1p m=1
+x1 VCC GND VB_B net2 net1 out IBIAS VB_A opamp_cascode
+I0 IBIAS GND 45u
+R1 net2 in 10k m=1
+V1 in GND 0.9
+.save i(v1)
+R2 net1 in 10k m=1
+R3 out net2 100k m=1
+R4 net1 GND 100k m=1
+**** begin user architecture code
+
+
+Vsupply VCC GND 1.8
+VbiasA VB_A GND 0.2
+VbiasB VB_B GND 1.1
+.include ../opamp_cascode.spice
+.control
+  alter V1 AC = 1
+  save all
+  ac dec 10 1 1G
+  let CMRR = 11*v(in)/v(out)
+  plot db(CMRR)
+  meas ac CMRR_1k FIND vdb(CMRR) AT=1k
+  meas ac CMRR_100 FIND vdb(CMRR) AT=100
+  echo CMRR_100 = $&CMRR_100 dB
+  echo CMRR_1k = $&CMRR_1k dB
+.endc
+
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

@@ -1,0 +1,36 @@
+** sch_path: /home/zwierzak/projects/SKY130_OpAmp/06_ParasiticsSim/opamp_cascode_ac_noise.sch
+**.subckt opamp_cascode_ac_noise
+C1 out GND 1p m=1
+x1 VCC GND VB_B Vp Vn out IBIAS VB_A opamp_cascode
+I0 IBIAS GND 45u
+**** begin user architecture code
+
+
+Vsupply VCC GND 1.8
+VbiasA VB_A GND 0.2
+VbiasB VB_B GND 1.1
+Vpos Vp GND DC 0.9 AC 0
+Vneg Vn GND DC 0.9 AC 0
+.include ../opamp_cascode.spice
+.control
+  alter Vpos AC = 1
+  alter Vneg AC = 1
+  save all
+  noise v(out) Vpos dec 10 1 50MEG Vneg dec 10 1 50MEG
+  setplot noise1
+  plot inoise_spectrum
+.endc
+
+
+
+.param mc_mm_switch=1
+.param mc_pr_switch=0
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
