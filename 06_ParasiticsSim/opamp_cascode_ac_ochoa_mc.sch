@@ -90,7 +90,7 @@ Vin Vp GND 0.9
 .control
   set wr_vecnames
   set wr_singlescale
-  let mc_runs=5
+  let mc_runs=10
   let run=1
   set curplot=new
   set final=$curplot
@@ -151,6 +151,6 @@ C {devices/lab_pin.sym} -140 20 1 1 {name=p16 lab=IBIAS}
 C {devices/isource.sym} -400 -510 0 0 {name=I0 value=45u}
 C {devices/gnd.sym} -400 -460 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -400 -560 3 1 {name=p17 lab=IBIAS}
-C {opamp_cascode.sym} -100 -80 0 0 {name=x1}
-C {opamp_cascode.sym} -100 -460 0 0 {name=x2}
 C {corner.sym} 210 -600 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
+C {./opamp_cascode.sym} -100 -80 0 0 {name=x1}
+C {./opamp_cascode.sym} -100 -460 0 0 {name=x2}

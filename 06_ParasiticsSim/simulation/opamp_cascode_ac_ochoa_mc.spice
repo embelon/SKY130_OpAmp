@@ -1,5 +1,5 @@
-** sch_path: ../opamp_cascode_ac_ochoa.sch
-**.subckt opamp_cascode_ac_ochoa
+** sch_path: ../opamp_cascode_ac_ochoa_mc.sch
+**.subckt opamp_cascode_ac_ochoa_mc
 V2 Vout net1 DC=0 AC={B}
 .save i(v2)
 C1 Vout GND 1p m=1
@@ -20,17 +20,35 @@ Vin Vp GND 0.9
 .param B=0
 .include ../opamp_cascode.spice
 .control
-  ac dec 10 1 1G
-  alterparam B=1
-  reset
-  ac dec 10 1 1G
-  setplot new
-  set curplottitle=OpenLoopGain
-  let frequency = ac1.frequency
-  let T = (ac1.i(V2) + ac2.i(V1)) / (ac1.i(V1) + ac2.i(V2))
-  let mag = db(T)
-  let phase = 180*cph(T)/pi
-  plot mag phase xlog
+  set wr_vecnames
+  set wr_singlescale
+  let mc_runs=10
+  let run=1
+  set curplot=new
+  set final=$curplot
+  setplot $final
+  dowhile run <= mc_runs
+    alterparam B=0
+    reset
+    ac dec 10 1 1G
+    alterparam B=1
+    reset
+    ac dec 10 1 1G
+    let ixf = 2*run-1
+    let ixs = 2*run
+    let frequency = ac{$&ixf}.frequency
+    let T = (ac{$&ixf}.i(V2) + ac{$&ixs}.i(V1)) / (ac{$&ixf}.i(V1) + ac{$&ixs}.i(V2))
+    let mag = db(T)
+    let phase = 180*cph(T)/pi
+    set dt = $curplot
+    setplot $final
+    let mag{$&run}={$dt}.mag
+    let phase{$&run}={$dt}.phase
+    setplot $dt
+    let run = run + 1
+  end
+  setplot $final
+  plot all vs ac1.frequency xlog
 .endc
 
 

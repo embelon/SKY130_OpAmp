@@ -1,11 +1,11 @@
-** sch_path: /home/zwierzak/projects/SKY130_OpAmp/06_ParasiticsSim/opamp_cascode_ac_psrr.sch
+** sch_path: ../opamp_cascode_ac_psrr.sch
 **.subckt opamp_cascode_ac_psrr
 C1 out GND 1p m=1
-x1 VCC GND VB_B Vcm Vn out IBIAS VB_A opamp_cascode
 I0 IBIAS GND 45u
 R1 out Vn 1k m=1
 V1 Vcm GND 0.9
 .save i(v1)
+x1 Vcm Vn VCC GND out VB_A VB_B IBIAS opamp_cascode
 **** begin user architecture code
 
 

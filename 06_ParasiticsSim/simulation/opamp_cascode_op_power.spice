@@ -1,36 +1,27 @@
-** sch_path: ../opamp_cascode_ac_cmrr.sch
-**.subckt opamp_cascode_ac_cmrr
+** sch_path: ../opamp_cascode_op_power.sch
+**.subckt opamp_cascode_op_power
 C1 out GND 1p m=1
 I0 IBIAS GND 45u
-R1 net2 in 10k m=1
-V1 in GND 0.9
-.save i(v1)
-R2 net1 in 10k m=1
-R3 out net2 100k m=1
-R4 net1 GND 100k m=1
-x1 net2 net1 VCC GND out VB_A VB_B IBIAS opamp_cascode
+x1 Vp Vn VCC GND out VB_A VB_B IBIAS opamp_cascode
 **** begin user architecture code
 
 
 Vsupply VCC GND 1.8
 VbiasA VB_A GND 0.2
 VbiasB VB_B GND 1.1
+Vpos Vp GND 0.9
+Vneg Vn GND 0.9
 .include ../opamp_cascode.spice
 .control
-  alter V1 AC = 1
+  define Power(x,y) -(x*y)
   save all
-  ac dec 10 1 1G
-  let CMRR = 11*v(in)/v(out)
-  plot db(CMRR)
-  meas ac CMRR_1k FIND vdb(CMRR) AT=1k
-  meas ac CMRR_100 FIND vdb(CMRR) AT=100
-  echo CMRR_100 = $&CMRR_100 dB
-  echo CMRR_1k = $&CMRR_1k dB
+  op
+  print Power(v(VCC), Vsupply#branch)
 .endc
 
 
 
-.param mc_mm_switch=0
+.param mc_mm_switch=1
 .param mc_pr_switch=0
 .include ~/.volare/sky130A/libs.tech/ngspice/corners/tt.spice
 .include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice

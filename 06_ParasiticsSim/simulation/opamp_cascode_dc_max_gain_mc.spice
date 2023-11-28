@@ -1,6 +1,6 @@
-** sch_path: ../opamp_cascode_dc_max_gain.sch
-**.subckt opamp_cascode_dc_max_gain
-Vcm net1 GND 0.9
+** sch_path: ../opamp_cascode_dc_max_gain_mc.sch
+**.subckt opamp_cascode_dc_max_gain_mc
+Vcm net1 GND 0.985
 .save i(vcm)
 C1 out GND 1p m=1
 Vdiff Vdiff GND 0
@@ -17,13 +17,30 @@ VbiasA VB_A GND 0.2
 VbiasB VB_B GND 1.1
 .include ../opamp_cascode.spice
 .control
-  save all
-  dc Vdiff -0.1 0.1 0.00001
-  let dVout = deriv(v(out))
-  plot dVout vs Vdiff retraceplot
-  meas dc maxGain max dVout
+  set wr_vecnames
+  set wr_singlescale
+  let mc_runs=20
+  let run=1
+  set curplot=new
+  set final=$curplot
+  setplot $final
+  dowhile run <= mc_runs
+    save all
+    dc Vdiff -0.01 0.01 0.000001
+    let dVout = deriv(v(out))
+    meas dc maxGain max dVout
+    set dt = $curplot
+    setplot $final
+    let dVout{$&run}={$dt}.v(dVout)
+    let maxGain{$&run}={$dt}.maxGain
+    setplot $dt
+    reset
+    let run = run + 1
+  end
+  setplot $final
+  plot allv vs dc1.v(Vdiff) retraceplot
   set hcopydevtype = svg
-  hardcopy dc_max_gain.svg dVout vs Vdiff
+  hardcopy dc_max_gain_mc.svg allv vs dc1.v(Vdiff)
 .endc
 
 

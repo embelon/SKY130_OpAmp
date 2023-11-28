@@ -79,7 +79,6 @@ device="ceramic capacitor"}
 C {devices/lab_pin.sym} -160 -180 3 1 {name=p7 lab=VB_A}
 C {devices/lab_pin.sym} -140 -180 3 1 {name=p8 lab=VB_B}
 C {devices/lab_pin.sym} -160 20 1 1 {name=p9 lab=IBIAS}
-C {opamp_cascode.sym} -120 -80 0 0 {name=x1}
 C {corner.sym} 100 -290 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/gnd.sym} -400 -200 0 0 {name=l1 lab=GND}
 C {devices/isource.sym} -400 -230 0 0 {name=I0 value=45u}
@@ -102,3 +101,4 @@ m=1}
 C {devices/gnd.sym} -400 60 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} -400 -10 0 0 {name=Vcm value=0.9}
 C {devices/lab_pin.sym} -400 -120 3 1 {name=p2 lab=cm}
+C {./opamp_cascode.sym} -120 -80 0 0 {name=x1}

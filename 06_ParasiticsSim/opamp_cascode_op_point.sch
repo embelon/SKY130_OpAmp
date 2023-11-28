@@ -69,9 +69,9 @@ C {devices/code_shown.sym} 140 -110 0 0 {name=sim only_toplevel=false value="
 .include ../opamp_cascode.spice
 .control
   save all 
-  set p_num_list = ( 1 2 5 7 9 10 20 100 )
-  set n_num_list = ( 3 4 6 8 11 12 )
-  set param_list = ( vds id )
+  set p_num_list = ( 891 232 1509 1508 393 909 997 1299 )
+  set n_num_list = ( 889 344 488 866 234 963 )
+  set param_list = ( vds )
   foreach p_num $p_num_list
     foreach param $param_list
       save @m.x1.xm\{$p_num\}.msky130_fd_pr__pfet_01v8[\{$param\}]
@@ -85,21 +85,15 @@ C {devices/code_shown.sym} 140 -110 0 0 {name=sim only_toplevel=false value="
   op
   foreach p_num $p_num_list
     foreach param $param_list
-      print @m.x1.xm\{$p_num\}.msky130_fd_pr__pfet_01v8[\{$param\}]
+      print m.x1.x\{$p_num\}.msky130_fd_pr__pfet_01v8#body
     end
   end
   foreach n_num $n_num_list
     foreach param $param_list
-      print @m.x1.xm\{$n_num\}.msky130_fd_pr__nfet_01v8[\{$param\}]
+      print m.x1.x\{$n_num\}.msky130_fd_pr__nfet_01v8#body
     end
   end 
 .endc
-"}
-C {devices/code_shown.sym} 140 -210 0 0 {name=models
-only_toplevel=false
-format="tcleval( @value )"
-value="
-.lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
 "}
 C {devices/gnd.sym} -300 -40 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} -320 340 0 0 {name=l4 lab=GND}
@@ -129,4 +123,5 @@ C {devices/vsource.sym} -80 -90 0 0 {name=V6 value=1.1}
 C {devices/gnd.sym} -80 -40 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -80 -140 3 1 {name=p11 lab=VBIAS_B}
 C {devices/isource.sym} -200 -90 0 0 {name=I0 value=45u}
-C {opamp_cascode.sym} -80 200 0 0 {name=x1}
+C {corner.sym} 130 -280 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {./opamp_cascode.sym} -80 200 0 0 {name=x1}

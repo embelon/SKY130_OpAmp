@@ -59,7 +59,7 @@ VbiasB VB_B GND 1.1
 .include ../opamp_cascode.spice
 .control
   save all
-  dc Vdiff -0.01 0.01 0.000001
+  dc Vdiff -0.1 0.1 0.00001
   let dVout = deriv(v(out))
   plot dVout vs Vdiff retraceplot
   meas dc maxGain max dVout
@@ -89,7 +89,7 @@ C {devices/isource.sym} -960 -490 0 0 {name=Ib value=45u
 }
 C {devices/gnd.sym} -960 -440 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} -960 -540 3 1 {name=p12 lab=IBIAS}
-C {opamp_cascode.sym} -740 -260 0 0 {name=x1}
 C {corner.sym} -500 -570 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
 C {devices/asrc.sym} -970 -300 1 0 {name=B1 function="v=v(Vdiff)"}
 C {devices/asrc.sym} -910 -220 3 0 {name=B2 function="v=v(Vdiff)"}
+C {./opamp_cascode.sym} -740 -260 0 0 {name=x1}

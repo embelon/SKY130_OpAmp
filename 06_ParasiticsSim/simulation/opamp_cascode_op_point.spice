@@ -1,0 +1,60 @@
+** sch_path: ../opamp_cascode_op_point.sch
+**.subckt opamp_cascode_op_point
+V1 VCC GND 1.8
+.save i(v1)
+V4 inp GND 0.9
+.save i(v4)
+V2 inm GND 0.9
+.save i(v2)
+C1 out GND 1p m=1
+V5 VBIAS_A GND 0.2
+.save i(v5)
+V6 VBIAS_B GND 1.1
+.save i(v6)
+I0 IBIAS GND 45u
+x1 inp inm VCC GND out VBIAS_A VBIAS_B IBIAS opamp_cascode
+**** begin user architecture code
+
+
+.include ../opamp_cascode.spice
+.control
+  save all
+  set p_num_list = ( 891 232 1509 1508 393 909 997 1299 )
+  set n_num_list = ( 889 344 488 866 234 963 )
+  set param_list = ( vds )
+  foreach p_num $p_num_list
+    foreach param $param_list
+      save @m.x1.xm{$p_num}.msky130_fd_pr__pfet_01v8[{$param}]
+    end
+  end
+  foreach n_num $n_num_list
+    foreach param $param_list
+      save @m.x1.xm{$n_num}.msky130_fd_pr__nfet_01v8[{$param}]
+    end
+  end
+  op
+  foreach p_num $p_num_list
+    foreach param $param_list
+      print m.x1.x{$p_num}.msky130_fd_pr__pfet_01v8#body
+    end
+  end
+  foreach n_num $n_num_list
+    foreach param $param_list
+      print m.x1.x{$n_num}.msky130_fd_pr__nfet_01v8#body
+    end
+  end
+.endc
+
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include ~/.volare/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

@@ -1,5 +1,5 @@
-** sch_path: ../opamp_cascode_ac_bandwidth.sch
-**.subckt opamp_cascode_ac_bandwidth
+** sch_path: ../opamp_cascode_ac_bandwidth_mc.sch
+**.subckt opamp_cascode_ac_bandwidth_mc
 C1 out GND 1p m=1
 I0 IBIAS GND 45u
 x1 Vp out VCC GND out VB_A VB_B IBIAS opamp_cascode
@@ -12,13 +12,29 @@ VbiasB VB_B GND 1.1
 Vpos Vp GND 0
 .include ../opamp_cascode.spice
 .control
-  alter Vpos AC = 1
-  alter Vpos DC = 0.9
-  save all
-  ac dec 10 1 1G
-  plot v(out)
-  meas ac freq when v(out)=0.707 fall=1
-  echo bandwidth = $&freq Hz
+  set wr_vecnames
+  set wr_singlescale
+  let mc_runs=3
+  let run=1
+  set curplot=new
+  set final=$curplot
+  setplot $final
+  dowhile run <= mc_runs
+    alter Vpos AC = 1
+    alter Vpos DC = 0.9
+    save all
+    ac dec 10 1 1G
+    meas ac freq when v(out)=0.707 fall=1
+    set dt = $curplot
+    setplot $final
+    let vout{$&run}={$dt}.v(out)
+    let b3db{$&run}={$dt}.freq
+    setplot $dt
+    reset
+    let run = run + 1
+  end
+  setplot $final
+  plot allv vs ac1.frequency retraceplot
 .endc
 
 
