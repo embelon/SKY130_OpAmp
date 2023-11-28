@@ -6,17 +6,17 @@ V {}
 S {}
 E {}
 N 120 20 120 140 {
-lab=#net1}
+lab=bias3}
 N 280 20 280 140 {
-lab=#net2}
+lab=bias21}
 N 280 120 340 120 {
-lab=#net2}
+lab=bias21}
 N 340 120 340 170 {
-lab=#net2}
+lab=bias21}
 N 60 120 60 170 {
-lab=#net1}
+lab=bias3}
 N 60 120 120 120 {
-lab=#net1}
+lab=bias3}
 N 40 -340 200 -340 {
 lab=VCC}
 N 200 -340 200 -320 {
@@ -54,15 +54,15 @@ lab=VCC}
 N 220 -340 220 -290 {
 lab=VCC}
 N 200 -260 200 -80 {
-lab=#net3}
+lab=m100m5}
 N 320 170 460 170 {
-lab=#net2}
+lab=bias21}
 N 500 200 500 220 {
 lab=VSS}
 N 500 100 500 140 {
-lab=#net4}
+lab=m9m10}
 N -60 170 80 170 {
-lab=#net1}
+lab=bias3}
 N -100 200 -100 220 {
 lab=VSS}
 N -100 220 520 220 {
@@ -74,29 +74,29 @@ lab=VSS}
 N -120 220 -100 220 {
 lab=VSS}
 N -100 100 -100 140 {
-lab=#net5}
+lab=m3m4}
 N -60 70 460 70 {
 lab=VB_B}
 N 120 -60 120 -40 {
-lab=#net3}
+lab=m100m5}
 N 120 -60 280 -60 {
-lab=#net3}
+lab=m100m5}
 N 280 -60 280 -40 {
-lab=#net3}
+lab=m100m5}
 N 200 -80 200 -60 {
-lab=#net3}
+lab=m100m5}
 N 500 -60 500 40 {
 lab=OUT}
 N -100 -60 -100 40 {
-lab=#net6}
+lab=bias1}
 N -60 -90 460 -90 {
 lab=VB_A}
 N -100 -40 -40 -40 {
-lab=#net6}
+lab=bias1}
 N -40 -190 -40 -40 {
-lab=#net6}
+lab=bias1}
 N -60 -190 -40 -190 {
-lab=#net6}
+lab=bias1}
 N -120 -190 -100 -190 {
 lab=VCC}
 N -100 -240 -100 -220 {
@@ -110,9 +110,9 @@ lab=VCC}
 N 500 -340 500 -220 {
 lab=VCC}
 N -100 -160 -100 -120 {
-lab=#net7}
+lab=m1m2}
 N 500 -160 500 -120 {
-lab=#net8}
+lab=m9m10}
 N -260 -260 -260 -220 {
 lab=IB}
 N -260 -340 -260 -320 {
@@ -136,13 +136,13 @@ lab=IB}
 N 500 -10 540 -10 {
 lab=OUT}
 N -40 -190 460 -190 {
-lab=#net6}
+lab=bias1}
 N -120 -90 -100 -90 {
 lab=VCC}
 N -200 -40 -200 -20 {
-lab=#net6}
+lab=bias1}
 N -200 -40 -100 -40 {
-lab=#net6}
+lab=bias1}
 N -200 40 -200 220 {
 lab=VSS}
 N -200 220 -120 220 {
@@ -167,14 +167,22 @@ N 500 70 520 70 {
 lab=VSS}
 N 520 70 520 170 {
 lab=VSS}
-N -120 -190 -120 -90 {}
-N -120 -340 -120 -240 {}
-N 520 -340 520 -240 {}
-N 500 -340 520 -340 {}
-N 500 -90 520 -90 {}
-N 520 -190 520 -90 {}
-N -120 70 -100 70 {}
-N -120 70 -120 170 {}
+N -120 -190 -120 -90 {
+lab=VCC}
+N -120 -340 -120 -240 {
+lab=VCC}
+N 520 -340 520 -240 {
+lab=VCC}
+N 500 -340 520 -340 {
+lab=VCC}
+N 500 -90 520 -90 {
+lab=VCC}
+N 520 -190 520 -90 {
+lab=VCC}
+N -120 70 -100 70 {
+lab=VSS}
+N -120 70 -120 170 {
+lab=VSS}
 C {pfet_01v8.sym} 480 -190 0 0 {name=M9
 L=15
 W=5
@@ -392,3 +400,11 @@ C {devices/lab_pin.sym} -260 -220 3 0 {name=p14 sig_type=std_logic lab=IB}
 C {devices/ipin.sym} -350 -100 0 0 {name=p15 lab=VB_A}
 C {devices/ipin.sym} -350 -80 0 0 {name=p16 lab=VB_B}
 C {devices/ipin.sym} -350 -120 0 0 {name=p17 lab=IB}
+C {devices/lab_pin.sym} -100 -140 2 0 {name=p5 sig_type=std_logic lab=m1m2}
+C {devices/lab_pin.sym} 40 -190 1 0 {name=p18 sig_type=std_logic lab=bias1}
+C {devices/lab_pin.sym} 20 170 1 0 {name=p19 sig_type=std_logic lab=bias3}
+C {devices/lab_pin.sym} 380 170 1 0 {name=p20 sig_type=std_logic lab=bias21}
+C {devices/lab_pin.sym} -100 120 2 0 {name=p21 sig_type=std_logic lab=m3m4}
+C {devices/lab_pin.sym} 200 -210 2 0 {name=p22 sig_type=std_logic lab=m100m5}
+C {devices/lab_pin.sym} 500 -140 0 0 {name=p23 sig_type=std_logic lab=m9m10}
+C {devices/lab_pin.sym} 500 120 0 0 {name=p24 sig_type=std_logic lab=m11m12}
