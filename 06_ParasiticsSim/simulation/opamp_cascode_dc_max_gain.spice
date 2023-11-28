@@ -18,7 +18,7 @@ VbiasB VB_B GND 1.1
 .include ../opamp_cascode.spice
 .control
   save all
-  dc Vdiff -0.1 0.1 0.00001
+  dc Vdiff -0.01 0.01 0.000001
   let dVout = deriv(v(out))
   plot dVout vs Vdiff retraceplot
   meas dc maxGain max dVout
